@@ -20,13 +20,13 @@ export default function Footer() {
           <Link to="/portfolio" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
             Work
           </Link>
-          <Link to="/#services" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
+          <Link to="/services" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
             Services
           </Link>
           <Link to="/industries" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
             Industries
           </Link>
-          <Link to="/#contact" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
+          <Link to="/contact" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
             Contact
           </Link>
         </div>

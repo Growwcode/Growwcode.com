@@ -8,9 +8,9 @@ const NAV_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'Agency', to: '/#agency' },
   { label: 'Work', to: '/portfolio' },
-  { label: 'Services', to: '/#services' },
+  { label: 'Services', to: '/services' },
   { label: 'Industries', to: '/industries' },
-  { label: 'Contact', to: '/#contact' },
+  { label: 'Contact', to: '/contact' },
 ]
 
 function isLinkActive(link, pathname, hash) {
@@ -95,7 +95,7 @@ export default function Header() {
 
             <div className="flex items-center justify-end gap-2 sm:gap-3">
               <Link
-                to="/#contact"
+                to="/contact"
                 className="hidden rounded-full bg-gc-blue px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-gc-blue/20 transition hover:bg-gc-navy sm:inline-flex"
               >
                 Get in touch
@@ -184,7 +184,7 @@ export default function Header() {
 
         <div className="border-t border-gc-navy/10 p-5">
           <Link
-            to="/#contact"
+            to="/contact"
             onClick={closeMenu}
             className="flex w-full items-center justify-center rounded-full bg-gc-blue px-5 py-3.5 text-sm font-semibold text-white shadow-md shadow-gc-blue/25 transition hover:bg-gc-navy"
           >

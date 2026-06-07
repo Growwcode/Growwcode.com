@@ -4,6 +4,8 @@ import ScrollToTop from './components/ScrollToTop.jsx'
 import HomePage from './pages/HomePage.jsx'
 import IndustriesPage from './pages/IndustriesPage.jsx'
 import PortfolioPage from './pages/PortfolioPage.jsx'
+import ContactPage from './pages/ContactPage.jsx'
+import ServicesPage from './pages/ServicesPage.jsx'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
             <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
       </div>

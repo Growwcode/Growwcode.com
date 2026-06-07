@@ -282,7 +282,7 @@ function IndustryCta({ visible }) {
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
-              to="/#contact"
+              to="/contact"
               className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-sm font-semibold text-gc-navy shadow-lg shadow-black/10 transition-all hover:-translate-y-0.5 hover:bg-brand-50 hover:shadow-xl"
             >
               Talk to our team
@@ -291,7 +291,7 @@ function IndustryCta({ visible }) {
               </svg>
             </Link>
             <Link
-              to="/#services"
+              to="/services"
               className="text-sm font-medium text-white/75 transition-colors hover:text-white"
             >
               Explore our services
