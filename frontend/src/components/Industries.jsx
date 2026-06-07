@@ -80,7 +80,7 @@ function IndustryVisual({ industry, index, visible, imageFirst }) {
   if (industry.image) {
     return (
       <div
-        className={`industry-showcase group relative flex min-h-[220px] items-center justify-center py-2 sm:min-h-[260px] lg:-mb-8 lg:min-h-0 lg:py-0 ${
+        className={`industry-showcase group relative flex min-h-[220px] items-center justify-center py-2 sm:min-h-[260px] ${
           imageFirst ? 'reveal-left' : 'reveal-right'
         } ${visible ? 'is-visible' : ''}`}
       >
@@ -93,7 +93,7 @@ function IndustryVisual({ industry, index, visible, imageFirst }) {
 
         <div
           aria-hidden="true"
-          className="industry-showcase__blob absolute inset-x-6 inset-y-4 rounded-[45%_55%_60%_40%_/_50%_45%_55%_50%] bg-gradient-to-br from-brand-100/90 via-brand-50/40 to-transparent lg:inset-y-2"
+          className="industry-showcase__blob absolute inset-x-6 inset-y-4 rounded-[45%_55%_60%_40%_/_50%_45%_55%_50%] bg-gradient-to-br from-brand-100/90 via-brand-50/40 to-transparent"
         />
 
         <div
@@ -149,9 +149,7 @@ function IndustryRow({ industry, index }) {
       ref={rowRef}
       id={`industry-${index + 1}`}
       className={`scroll-mt-28 ${
-        index === 0
-          ? 'pb-2 pt-4 lg:pb-0 lg:pt-6'
-          : 'py-4 lg:-mt-14 lg:py-0'
+        index === 0 ? 'pb-2 pt-4 lg:pb-3 lg:pt-6' : 'py-4 lg:py-5'
       }`}
     >
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
