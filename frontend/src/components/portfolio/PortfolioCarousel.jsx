@@ -98,6 +98,23 @@ function ProjectDetails({ project, categoryLabel }) {
           </ul>
         </div>
       )}
+
+      {project.devOps && (
+        <div className="rounded-xl border border-gc-blue/25 bg-gc-blue/10 p-4 sm:p-5">
+          <h3 className="text-sm font-bold uppercase tracking-wide text-gc-blue">
+            AWS & Deployment
+          </h3>
+          <p className="mt-1 text-sm text-white/80">{project.devOps.summary}</p>
+          <ul className="mt-3 space-y-1.5">
+            {project.devOps.features.map((feature) => (
+              <li key={feature} className="flex gap-2 text-sm text-white/85">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gc-blue" />
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   )
 }

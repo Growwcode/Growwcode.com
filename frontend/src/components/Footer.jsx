@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="border-t border-brand-100 bg-white">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 sm:flex-row lg:px-8">
         <Link to="/" className="inline-flex shrink-0 items-center">
-          <img src={LOGO_URL} alt="GrowwCode" className="h-7 w-auto" />
+          <img src={LOGO_URL} alt="GrowwCode" className="h-5 w-auto sm:h-6" />
         </Link>
         <p className="text-sm text-gc-navy/50">
           &copy; {new Date().getFullYear()} GrowwCode. All rights reserved.

@@ -33,7 +33,7 @@ export default function Header() {
             <img
               src={LOGO_URL}
               alt="GrowwCode"
-              className="h-8 w-auto sm:h-9"
+              className="h-6 w-auto sm:h-7"
             />
           </Link>
 

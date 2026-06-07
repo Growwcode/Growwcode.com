@@ -42,16 +42,35 @@ const webdevProjects = [
   },
 ]
 
+const devopsProjects = [
+  {
+    id: 'choicetime',
+    title: 'ChoiceTime',
+    src: 'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780836430/devops-choice_vzifnc.png',
+    alt: 'ChoiceTime — premium watches e-commerce with AWS DevOps deployment',
+    url: 'https://www.choicetime.in/',
+    description:
+      'Premium watches & lifestyle e-commerce platform with 250+ products across 8+ categories. Full-stack store built with React, Node.js, and MongoDB — deployed on AWS with Docker, GitLab, and CI/CD for secure, scalable production releases.',
+    tags: ['E-Commerce', 'Watches', 'AWS'],
+    devOps: {
+      summary:
+        'End-to-end AWS deployment with Docker containerization, GitLab, and CI/CD pipelines.',
+      features: [
+        'AWS EC2 server hosting with scalable cloud infrastructure',
+        'Docker containerization for consistent dev and production environments',
+        'GitLab repository with version control and collaboration workflows',
+        'CI/CD pipelines for automated build, test, and deployment',
+        'Cloudinary image storage and optimized media delivery',
+        'SSL-secured domain, MongoDB Atlas, and production-ready performance',
+      ],
+    },
+  },
+]
+
 const appdevProjects = [
   { id: 'appdev-1', src: null, alt: 'App development project 1', title: 'Coming Soon' },
   { id: 'appdev-2', src: null, alt: 'App development project 2', title: 'Coming Soon' },
   { id: 'appdev-3', src: null, alt: 'App development project 3', title: 'Coming Soon' },
-]
-
-const cloudProjects = [
-  { id: 'cloud-1', src: null, alt: 'Cloud project 1', title: 'Coming Soon' },
-  { id: 'cloud-2', src: null, alt: 'Cloud project 2', title: 'Coming Soon' },
-  { id: 'cloud-3', src: null, alt: 'Cloud project 3', title: 'Coming Soon' },
 ]
 
 export const PORTFOLIO_CATEGORIES = [
@@ -59,7 +78,7 @@ export const PORTFOLIO_CATEGORIES = [
     id: 'all',
     label: 'ALL',
     thumbnail: webdevProjects[0].src,
-    images: [...webdevProjects, ...appdevProjects, ...cloudProjects],
+    images: [...webdevProjects, ...appdevProjects, ...devopsProjects],
   },
   {
     id: 'webdev',
@@ -74,9 +93,9 @@ export const PORTFOLIO_CATEGORIES = [
     images: appdevProjects,
   },
   {
-    id: 'cloud',
-    label: 'CLOUD',
-    thumbnail: null,
-    images: cloudProjects,
+    id: 'devops',
+    label: 'DEVOPS',
+    thumbnail: devopsProjects[0].src,
+    images: devopsProjects,
   },
 ]
