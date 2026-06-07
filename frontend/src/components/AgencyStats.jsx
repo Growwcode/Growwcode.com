@@ -5,17 +5,17 @@ const STATS = [
     ringText: 'CONTINUOUS SUPPORT MAINTENANCE',
   },
   {
-    value: '1000+',
+    value: '15+',
     labelLines: ['Projects', 'Delivered'],
     ringText: 'CRAFTING WINNING SOLUTIONS',
   },
   {
-    value: '13+',
+    value: '5+',
     labelLines: ['Years of', 'Experience'],
     ringText: 'EXPERIENCE MEETS INNOVATION',
   },
   {
-    value: '300+',
+    value: '10+',
     labelLines: ['Clients', 'Served'],
     ringText: 'TRUSTED WORLDWIDE PARTNERS',
   },
@@ -26,9 +26,9 @@ const CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS
 const GAP_ARC = CIRCUMFERENCE * 0.06
 
 function getRingFontSize(text) {
-  if (text.length > 30) return 11.5
-  if (text.length > 24) return 12.5
-  return 13.5
+  if (text.length > 30) return 12.5
+  if (text.length > 24) return 13.5
+  return 14.5
 }
 
 function RingText({ pathId, ringText }) {
@@ -49,7 +49,9 @@ function RingText({ pathId, ringText }) {
         key={`${pathId}-${wordIndex}`}
         fill="#007ffc"
         fontSize={fontSize}
-        fontWeight="800"
+        fontWeight="900"
+        fontFamily="DM Sans, system-ui, sans-serif"
+        className="stat-ring-label"
       >
         <textPath
           href={`#${pathId}`}

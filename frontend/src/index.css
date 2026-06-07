@@ -179,3 +179,8 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.stat-ring-label {
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
