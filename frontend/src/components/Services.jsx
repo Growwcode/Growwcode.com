@@ -71,10 +71,10 @@ const SERVICES = [
 export default function Services() {
   return (
     <section id="services" className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
-      <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <h2 className="text-3xl font-bold tracking-tight text-gc-navy sm:text-4xl">
         Our services
       </h2>
-      <p className="mt-4 max-w-xl text-base text-gray-500">
+      <p className="mt-4 max-w-xl text-base text-gc-navy/60">
         End-to-end IT solutions designed to help your business innovate, scale, and
         stay ahead of the competition.
       </p>
@@ -83,13 +83,13 @@ export default function Services() {
         {SERVICES.map((service) => (
           <div
             key={service.title}
-            className="rounded-2xl border border-brand-100 bg-white p-8 transition-all hover:border-brand-200 hover:shadow-lg hover:shadow-navy/10"
+            className="rounded-2xl border border-brand-100 bg-white p-8 transition-all hover:border-brand-200 hover:shadow-lg hover:shadow-gc-blue/10"
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy/10 text-navy">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gc-blue/10 text-gc-blue">
               {service.icon}
             </div>
-            <h3 className="mt-5 text-lg font-bold text-gray-900">{service.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-gray-500">{service.description}</p>
+            <h3 className="mt-5 text-lg font-bold text-gc-navy">{service.title}</h3>
+            <p className="mt-2 text-sm leading-relaxed text-gc-navy/60">{service.description}</p>
           </div>
         ))}
       </div>

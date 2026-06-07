@@ -100,7 +100,7 @@ function IndustryVisual({ industry, index, visible, imageFirst }) {
           aria-hidden="true"
           className="absolute right-8 top-6 h-20 w-20 opacity-40"
           style={{
-            backgroundImage: 'radial-gradient(circle, #3f5bd9 1.5px, transparent 1.5px)',
+            backgroundImage: 'radial-gradient(circle, #007ffc 1.5px, transparent 1.5px)',
             backgroundSize: '14px 14px',
           }}
         />
@@ -126,7 +126,7 @@ function IndustryVisual({ industry, index, visible, imageFirst }) {
         <img
           src={industry.image}
           alt={`${industry.title} solutions by GrowwCode`}
-          className="relative z-10 mx-auto h-auto w-full max-w-[420px] object-contain drop-shadow-[0_24px_48px_rgba(63,91,217,0.2)] transition-transform duration-700 ease-out group-hover:scale-[1.04] group-hover:-translate-y-1"
+          className="relative z-10 mx-auto h-auto w-full max-w-[420px] object-contain drop-shadow-[0_24px_48px_rgba(0,127,252,0.18)] transition-transform duration-700 ease-out group-hover:scale-[1.04] group-hover:-translate-y-1"
           loading="lazy"
         />
       </div>
@@ -163,15 +163,15 @@ function IndustryRow({ industry, index }) {
         </div>
 
         <div className={`${imageFirst ? 'lg:order-2' : 'lg:order-1'} ${imageFirst ? 'reveal-right' : 'reveal-left'} reveal-delay-1 ${rowVisible ? 'is-visible' : ''}`}>
-          <p className="text-sm font-semibold uppercase tracking-widest text-navy">
+          <p className="text-sm font-semibold uppercase tracking-widest text-gc-blue">
             Industry {String(index + 1).padStart(2, '0')}
           </p>
-          <h3 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl">{industry.title}</h3>
-          <p className="mt-4 text-base leading-relaxed text-gray-600">{industry.description}</p>
+          <h3 className="mt-2 text-2xl font-bold text-gc-navy sm:text-3xl">{industry.title}</h3>
+          <p className="mt-4 text-base leading-relaxed text-gc-navy/70">{industry.description}</p>
           <ul className="mt-6 space-y-3">
             {industry.highlights.map((item) => (
-              <li key={item} className="flex items-center gap-3 text-sm text-gray-600">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-navy/10 text-xs font-bold text-navy">
+              <li key={item} className="flex items-center gap-3 text-sm text-gc-navy/70">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gc-blue/10 text-xs font-bold text-gc-blue">
                   ✓
                 </span>
                 {item}
@@ -230,7 +230,7 @@ function IndustryCtaIllustration() {
 function IndustryCta({ visible }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-navy via-[#3349c4] to-navy-dark shadow-2xl shadow-navy/25 ${visible ? 'is-visible' : ''}`}
+      className={`relative overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-navy via-gc-blue to-navy-dark shadow-2xl shadow-gc-navy/25 ${visible ? 'is-visible' : ''}`}
     >
       <div
         aria-hidden="true"
@@ -283,7 +283,7 @@ function IndustryCta({ visible }) {
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link
               to="/#contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-sm font-semibold text-navy shadow-lg shadow-black/10 transition-all hover:-translate-y-0.5 hover:bg-brand-50 hover:shadow-xl"
+              className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-sm font-semibold text-gc-navy shadow-lg shadow-black/10 transition-all hover:-translate-y-0.5 hover:bg-brand-50 hover:shadow-xl"
             >
               Talk to our team
               <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
@@ -332,16 +332,16 @@ export default function Industries() {
         />
 
         <div ref={heroRef} className={`relative mx-auto max-w-6xl px-6 lg:px-8 reveal ${heroVisible ? 'is-visible' : ''}`}>
-          <p className="text-sm font-semibold uppercase tracking-widest text-navy">
+          <p className="text-sm font-semibold uppercase tracking-widest text-gc-blue">
             Sector expertise
           </p>
-          <h1 className="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+          <h1 className="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-gc-navy sm:text-4xl lg:text-5xl">
             Industries we{' '}
             <span className="bg-gradient-to-r from-navy to-navy-accent bg-clip-text text-transparent">
               serve
             </span>
           </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-gray-600">
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-gc-navy/70">
             We partner with organizations across sectors to deliver tailored IT solutions.
             Every industry has unique challenges — we bring the right technology to solve them.
           </p>

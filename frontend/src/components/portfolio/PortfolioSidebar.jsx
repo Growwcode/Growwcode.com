@@ -7,7 +7,7 @@ function SidebarThumbnail({ category, isActive }) {
         src={thumbSrc}
         alt=""
         className={`h-14 w-20 shrink-0 rounded-md object-cover sm:h-16 sm:w-24 ${
-          isActive ? 'ring-2 ring-portfolio-purple ring-offset-2 ring-offset-[#F3F4F9]' : ''
+          isActive ? 'ring-2 ring-gc-blue ring-offset-2 ring-offset-gc-light' : ''
         }`}
       />
     )
@@ -15,8 +15,8 @@ function SidebarThumbnail({ category, isActive }) {
 
   return (
     <div
-      className={`h-14 w-20 shrink-0 rounded-md bg-portfolio-purple sm:h-16 sm:w-24 ${
-        isActive ? 'ring-2 ring-portfolio-purple ring-offset-2 ring-offset-[#F3F4F9]' : 'opacity-80'
+      className={`h-14 w-20 shrink-0 rounded-md bg-gc-blue sm:h-16 sm:w-24 ${
+        isActive ? 'ring-2 ring-gc-blue ring-offset-2 ring-offset-gc-light' : 'opacity-80'
       }`}
       aria-hidden="true"
     />
@@ -25,7 +25,7 @@ function SidebarThumbnail({ category, isActive }) {
 
 export default function PortfolioSidebar({ categories, activeId, onSelect }) {
   return (
-    <aside className="w-full shrink-0 rounded-2xl bg-[#F3F4F9] p-4 sm:p-5">
+    <aside className="w-full shrink-0 rounded-2xl bg-gc-light p-4 sm:p-5">
       <nav aria-label="Portfolio categories">
         <ul className="space-y-3">
           {categories.map((category) => {
@@ -37,12 +37,14 @@ export default function PortfolioSidebar({ categories, activeId, onSelect }) {
                   type="button"
                   onClick={() => onSelect(category.id)}
                   className={`flex w-full items-center justify-between gap-4 rounded-xl px-3 py-3 text-left transition ${
-                    isActive ? 'bg-white shadow-sm' : 'hover:bg-white/70'
+                    isActive
+                      ? 'bg-white shadow-sm ring-1 ring-gc-blue/20'
+                      : 'hover:bg-white/80'
                   }`}
                 >
                   <span
                     className={`text-sm font-bold tracking-wide sm:text-base ${
-                      isActive ? 'text-black' : 'text-gray-700'
+                      isActive ? 'text-gc-navy' : 'text-gc-navy/70'
                     }`}
                   >
                     {category.label}

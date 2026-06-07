@@ -1,29 +1,32 @@
 import { Link } from 'react-router-dom'
 
+const LOGO_URL =
+  'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780833773/growwcodeLogo_vywavp.png'
+
 export default function Footer() {
   return (
     <footer className="border-t border-brand-100 bg-white">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 sm:flex-row lg:px-8">
-        <Link to="/" className="text-lg font-bold text-navy">
-          Groww<span className="font-normal text-slate-400">Code</span>
+        <Link to="/" className="inline-flex shrink-0 items-center">
+          <img src={LOGO_URL} alt="GrowwCode" className="h-7 w-auto" />
         </Link>
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-gc-navy/50">
           &copy; {new Date().getFullYear()} GrowwCode. All rights reserved.
         </p>
         <div className="flex gap-6">
-          <Link to="/#agency" className="text-sm text-slate-500 hover:text-navy">
+          <Link to="/#agency" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
             About
           </Link>
-          <Link to="/portfolio" className="text-sm text-slate-500 hover:text-navy">
-            Portfolio
+          <Link to="/portfolio" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
+            Work
           </Link>
-          <Link to="/#services" className="text-sm text-slate-500 hover:text-navy">
+          <Link to="/#services" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
             Services
           </Link>
-          <Link to="/industries" className="text-sm text-slate-500 hover:text-navy">
+          <Link to="/industries" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
             Industries
           </Link>
-          <Link to="/#contact" className="text-sm text-slate-500 hover:text-navy">
+          <Link to="/#contact" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
             Contact
           </Link>
         </div>

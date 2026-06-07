@@ -13,9 +13,9 @@ export default function Portfolio() {
     <section className="bg-white py-10 lg:py-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <header className="mb-8 flex items-center gap-3 lg:mb-10">
-          <span className="h-8 w-1.5 rounded-full bg-portfolio-purple" aria-hidden="true" />
-          <h1 className="text-2xl font-bold tracking-[0.15em] text-black sm:text-3xl">
-            PORTFOLIO
+          <span className="h-8 w-1.5 rounded-full bg-gc-blue" aria-hidden="true" />
+          <h1 className="text-2xl font-bold tracking-tight text-gc-navy sm:text-3xl">
+            Groww&apos;s Code Work
           </h1>
         </header>
 

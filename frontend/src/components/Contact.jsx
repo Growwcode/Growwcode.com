@@ -31,7 +31,7 @@ function ContactIllustration() {
       <rect x="175" y="60" width="55" height="90" rx="10" stroke="#111" strokeWidth="2" fill="#fff" />
       <rect x="183" y="72" width="39" height="55" rx="4" fill="#f0f4f8" />
       <circle cx="202" cy="138" r="6" stroke="#111" strokeWidth="1.5" fill="#fff" />
-      <path d="M60 100 L75 85 M55 110 L70 95" stroke="#3f5bd9" strokeWidth="2" strokeLinecap="round" />
+      <path d="M60 100 L75 85 M55 110 L70 95" stroke="#007ffc" strokeWidth="2" strokeLinecap="round" />
     </svg>
   )
 }
@@ -56,17 +56,17 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gc-navy sm:text-4xl">
               Get in touch
             </h2>
-            <p className="mt-4 text-base text-gray-500">
+            <p className="mt-4 text-base text-gc-navy/60">
               Ready to start your next project? Reach out and our team will get back to
               you within 24 hours.
             </p>
 
             <a
               href="tel:+919876543210"
-              className="mt-8 inline-block rounded-md bg-navy px-8 py-4 text-lg font-bold text-white shadow-md shadow-navy/30 transition-colors hover:bg-navy-light"
+              className="mt-8 inline-block rounded-md bg-gc-blue px-8 py-4 text-lg font-bold text-white shadow-md shadow-gc-blue/30 transition-colors hover:bg-gc-blue/90"
             >
               +91 98765 43210
             </a>
@@ -77,7 +77,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <p className="mb-4 text-sm font-semibold text-gray-900">Select services</p>
+            <p className="mb-4 text-sm font-semibold text-gc-navy">Select services</p>
             <div className="mb-8 flex flex-wrap gap-3">
               {SERVICE_TAGS.map((tag) => (
                 <button
@@ -86,8 +86,8 @@ export default function Contact() {
                   onClick={() => toggleService(tag)}
                   className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                     selectedServices.includes(tag)
-                      ? 'bg-navy text-white'
-                      : 'bg-white text-slate-600 ring-1 ring-brand-200 hover:ring-navy/40'
+                      ? 'bg-gc-blue text-white'
+                      : 'bg-white text-gc-navy/70 ring-1 ring-brand-200 hover:ring-gc-blue/40'
                   }`}
                 >
                   {tag}
@@ -96,43 +96,43 @@ export default function Contact() {
             </div>
 
             {submitted ? (
-              <div className="rounded-2xl border border-navy/20 bg-navy/5 p-8 text-center">
-                <p className="text-lg font-semibold text-navy">Thank you!</p>
-                <p className="mt-2 text-sm text-gray-500">
+              <div className="rounded-2xl border border-gc-blue/20 bg-gc-blue/5 p-8 text-center">
+                <p className="text-lg font-semibold text-gc-navy">Thank you!</p>
+                <p className="mt-2 text-sm text-gc-navy/60">
                   We&apos;ve received your message and will be in touch soon.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
-                <p className="text-sm font-semibold text-gray-900">Enter details</p>
+                <p className="text-sm font-semibold text-gc-navy">Enter details</p>
                 <div className="grid gap-5 sm:grid-cols-2">
                   <input
                     type="text"
                     placeholder="First name"
                     required
-                    className="w-full rounded-md border border-brand-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-navy focus:ring-2 focus:ring-navy/20"
+                    className="w-full rounded-md border border-brand-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-gc-blue focus:ring-2 focus:ring-gc-blue/20"
                   />
                   <input
                     type="text"
                     placeholder="Last name"
                     required
-                    className="w-full rounded-md border border-brand-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-navy focus:ring-2 focus:ring-navy/20"
+                    className="w-full rounded-md border border-brand-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-gc-blue focus:ring-2 focus:ring-gc-blue/20"
                   />
                 </div>
                 <input
                   type="email"
                   placeholder="Email address"
                   required
-                  className="w-full rounded-md border border-brand-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-navy focus:ring-2 focus:ring-navy/20"
+                  className="w-full rounded-md border border-brand-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-gc-blue focus:ring-2 focus:ring-gc-blue/20"
                 />
                 <textarea
                   placeholder="Tell us about your project"
                   rows={4}
-                  className="w-full resize-none rounded-md border border-brand-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-navy focus:ring-2 focus:ring-navy/20"
+                  className="w-full resize-none rounded-md border border-brand-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-gc-blue focus:ring-2 focus:ring-gc-blue/20"
                 />
                 <button
                   type="submit"
-                  className="w-full rounded-md bg-navy py-3.5 text-sm font-semibold text-white shadow-md shadow-navy/30 transition-colors hover:bg-navy-light sm:w-auto sm:px-10"
+                  className="w-full rounded-md bg-gc-blue py-3.5 text-sm font-semibold text-white shadow-md shadow-gc-blue/30 transition-colors hover:bg-gc-blue/90 sm:w-auto sm:px-10"
                 >
                   Make contact
                 </button>

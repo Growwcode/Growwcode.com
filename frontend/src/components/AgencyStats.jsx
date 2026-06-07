@@ -47,7 +47,7 @@ function RingText({ pathId, ringText }) {
     return (
       <text
         key={`${pathId}-${wordIndex}`}
-        fill="#3f5bd9"
+        fill="#007ffc"
         fontSize={fontSize}
         fontWeight="800"
       >
@@ -88,10 +88,10 @@ function StatRing({ value, labelLines, ringText, index }) {
       </svg>
 
       <div className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center px-5 sm:px-8">
-        <p className="text-[2rem] font-extrabold leading-none tracking-tight text-navy sm:text-[2.5rem] lg:text-[3rem]">
+        <p className="text-[2rem] font-extrabold leading-none tracking-tight text-gc-navy sm:text-[2.5rem] lg:text-[3rem]">
           {value}
         </p>
-        <div className="mt-1.5 text-center text-xs font-semibold leading-tight text-slate-600 sm:mt-2 sm:text-sm">
+        <div className="mt-1.5 text-center text-xs font-semibold leading-tight text-gc-navy/65 sm:mt-2 sm:text-sm">
           {labelLines.map((line) => (
             <span key={line} className="block">
               {line}

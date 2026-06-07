@@ -7,7 +7,7 @@ const LOGO_URL =
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'Agency', to: '/#agency' },
-  { label: 'Portfolio', to: '/portfolio' },
+  { label: 'Work', to: '/portfolio' },
   { label: 'Services', to: '/#services' },
   { label: 'Industries', to: '/industries' },
   { label: 'Contact', to: '/#contact' },
@@ -42,7 +42,7 @@ export default function Header() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="text-sm font-medium text-slate-600 transition-colors hover:text-navy"
+                className="text-sm font-medium text-gc-navy/70 transition-colors hover:text-gc-blue"
               >
                 {link.label}
               </Link>
@@ -51,14 +51,14 @@ export default function Header() {
 
           <Link
             to="/#contact"
-            className="hidden rounded-md bg-navy px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-navy/25 transition-colors hover:bg-navy-light md:inline-block"
+            className="hidden rounded-md bg-gc-blue px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-gc-blue/25 transition-colors hover:bg-gc-blue/90 md:inline-block"
           >
             Make contact
           </Link>
 
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md p-2 text-navy md:hidden"
+            className="inline-flex items-center justify-center rounded-md p-2 text-gc-navy md:hidden"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
@@ -83,7 +83,7 @@ export default function Header() {
                   <Link
                     to={link.to}
                     onClick={closeMenu}
-                    className="block rounded-md px-3 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-brand-50 hover:text-navy"
+                    className="block rounded-md px-3 py-3 text-sm font-medium text-gc-navy/80 transition-colors hover:bg-brand-50 hover:text-gc-blue"
                   >
                     {link.label}
                   </Link>
@@ -94,7 +94,7 @@ export default function Header() {
               <Link
                 to="/#contact"
                 onClick={closeMenu}
-                className="block rounded-md bg-navy px-4 py-3 text-center text-sm font-semibold text-white shadow-sm shadow-navy/25 transition-colors hover:bg-navy-light"
+                className="block rounded-md bg-gc-blue px-4 py-3 text-center text-sm font-semibold text-white shadow-sm shadow-gc-blue/25 transition-colors hover:bg-gc-blue/90"
               >
                 Make contact
               </Link>
