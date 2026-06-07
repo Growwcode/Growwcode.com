@@ -111,6 +111,21 @@ const crmProjects = [
   },
 ]
 
+const portfolioProjects = [
+  ...webdevProjects,
+  ...appdevProjects,
+  ...devopsProjects,
+  ...aimlProjects,
+  ...crmProjects,
+]
+
+/** Client names from completed work (excludes placeholders). */
+export function getPortfolioClients() {
+  return portfolioProjects
+    .filter((project) => project.title && project.title !== 'Coming Soon' && project.url)
+    .map((project) => project.title)
+}
+
 export const PORTFOLIO_CATEGORIES = [
   {
     id: 'all',
