@@ -6,12 +6,13 @@ import IndustriesPage from './pages/IndustriesPage.jsx'
 import PortfolioPage from './pages/PortfolioPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import ServicesPage from './pages/ServicesPage.jsx'
+import './styles/components.css'
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white font-sans text-gc-navy antialiased">
         <Header />
         <main>
           <Routes>

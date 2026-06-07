@@ -93,13 +93,37 @@ const appdevProjects = [
   },
 ]
 
+const aimlProjects = [
+  {
+    id: 'aiml-1',
+    src: null,
+    alt: 'AI/ML project coming soon',
+    title: 'Coming Soon',
+  },
+]
+
+const crmProjects = [
+  {
+    id: 'crm-1',
+    src: null,
+    alt: 'CRM project coming soon',
+    title: 'Coming Soon',
+  },
+]
+
 export const PORTFOLIO_CATEGORIES = [
   {
     id: 'all',
     label: 'ALL',
     displayLabel: 'All Work',
     thumbnail: webdevProjects[0].src,
-    images: [...webdevProjects, ...appdevProjects, ...devopsProjects],
+    images: [
+      ...webdevProjects,
+      ...appdevProjects,
+      ...devopsProjects,
+      ...aimlProjects,
+      ...crmProjects,
+    ],
   },
   {
     id: 'webdev',
@@ -121,5 +145,19 @@ export const PORTFOLIO_CATEGORIES = [
     displayLabel: 'DevOps',
     thumbnail: devopsProjects[0].src,
     images: devopsProjects,
+  },
+  {
+    id: 'aiml',
+    label: 'AI/ML',
+    displayLabel: 'AI / ML',
+    thumbnail: null,
+    images: aimlProjects,
+  },
+  {
+    id: 'crm',
+    label: 'CRM',
+    displayLabel: 'CRM',
+    thumbnail: null,
+    images: crmProjects,
   },
 ]

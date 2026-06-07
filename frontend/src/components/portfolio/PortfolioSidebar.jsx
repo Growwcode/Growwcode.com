@@ -1,32 +1,7 @@
-function SidebarThumbnail({ category, isActive }) {
-  const thumbSrc = category.thumbnail ?? category.images[0]?.src
-
-  if (thumbSrc) {
-    return (
-      <img
-        src={thumbSrc}
-        alt=""
-        className={`h-14 w-20 shrink-0 rounded-md object-cover sm:h-16 sm:w-24 ${
-          isActive ? 'ring-2 ring-gc-blue ring-offset-2 ring-offset-gc-light' : ''
-        }`}
-      />
-    )
-  }
-
-  return (
-    <div
-      className={`h-14 w-20 shrink-0 rounded-md bg-gc-blue sm:h-16 sm:w-24 ${
-        isActive ? 'ring-2 ring-gc-blue ring-offset-2 ring-offset-gc-light' : 'opacity-80'
-      }`}
-      aria-hidden="true"
-    />
-  )
-}
-
 function MobileCategorySlider({ categories, activeId, onSelect }) {
   return (
-    <nav aria-label="Work categories" className="lg:hidden">
-      <div className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+    <nav aria-label="Work categories" className="py-3">
+      <div className="flex snap-x snap-mandatory gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {categories.map((category) => {
           const isActive = category.id === activeId
 
@@ -35,10 +10,10 @@ function MobileCategorySlider({ categories, activeId, onSelect }) {
               key={category.id}
               type="button"
               onClick={() => onSelect(category.id)}
-              className={`shrink-0 snap-start rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap transition ${
+              className={`shrink-0 snap-start rounded-full px-4 py-2 text-xs font-semibold whitespace-nowrap transition sm:px-5 sm:py-2.5 sm:text-sm ${
                 isActive
-                  ? 'bg-gc-blue text-white shadow-md shadow-gc-blue/25'
-                  : 'bg-gc-light text-gc-navy/75 ring-1 ring-gc-navy/10 hover:text-gc-navy'
+                  ? 'bg-gc-navy text-white shadow-md'
+                  : 'bg-white text-slate-600 ring-1 ring-slate-200 hover:text-gc-navy'
               }`}
             >
               {category.displayLabel ?? category.label}
@@ -52,31 +27,58 @@ function MobileCategorySlider({ categories, activeId, onSelect }) {
 
 function DesktopSidebar({ categories, activeId, onSelect }) {
   return (
-    <aside className="hidden w-full shrink-0 rounded-2xl bg-gc-light p-4 sm:p-5 lg:block">
-      <nav aria-label="Work categories">
-        <ul className="space-y-3">
-          {categories.map((category) => {
+    <aside className="hidden lg:block lg:w-full">
+      <div className="mb-4">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+          Explore
+        </p>
+        <h3 className="mt-1 text-lg font-bold text-gc-navy">Categories</h3>
+      </div>
+
+      <nav aria-label="Work categories" className="relative">
+        <div className="absolute left-[18px] top-4 h-[calc(100%-2rem)] w-px bg-slate-200" />
+
+        <ul className="space-y-2">
+          {categories.map((category, index) => {
             const isActive = category.id === activeId
 
             return (
-              <li key={category.id}>
+              <li key={category.id} className="relative">
                 <button
                   type="button"
                   onClick={() => onSelect(category.id)}
-                  className={`flex w-full items-center justify-between gap-4 rounded-xl px-3 py-3 text-left transition ${
+                  className={`group grid w-full grid-cols-[38px_1fr] items-center gap-3 rounded-xl px-2 py-2 text-left transition ${
                     isActive
-                      ? 'bg-white shadow-sm ring-1 ring-gc-blue/20'
-                      : 'hover:bg-white/80'
+                      ? 'bg-white shadow-sm ring-1 ring-slate-200'
+                      : 'hover:bg-white/70'
                   }`}
                 >
                   <span
-                    className={`text-sm font-bold tracking-wide sm:text-base ${
-                      isActive ? 'text-gc-navy' : 'text-gc-navy/70'
+                    className={`relative z-10 flex h-9 w-9 items-center justify-center rounded-full text-xs font-bold transition ${
+                      isActive
+                        ? 'bg-gc-navy text-white'
+                        : 'bg-white text-slate-400 ring-1 ring-slate-200 group-hover:text-gc-blue'
                     }`}
                   >
-                    {category.displayLabel ?? category.label}
+                    {String(index + 1).padStart(2, '0')}
                   </span>
-                  <SidebarThumbnail category={category} isActive={isActive} />
+
+                  <span className="min-w-0">
+                    <span
+                      className={`block truncate text-sm font-semibold ${
+                        isActive ? 'text-gc-navy' : 'text-slate-600 group-hover:text-gc-navy'
+                      }`}
+                    >
+                      {category.displayLabel ?? category.label}
+                    </span>
+                    <span
+                      className={`mt-0.5 block text-xs ${
+                        isActive ? 'text-gc-blue' : 'text-slate-400'
+                      }`}
+                    >
+                      {category.images?.length || 0} projects
+                    </span>
+                  </span>
                 </button>
               </li>
             )
@@ -87,7 +89,27 @@ function DesktopSidebar({ categories, activeId, onSelect }) {
   )
 }
 
-export default function PortfolioSidebar({ categories, activeId, onSelect }) {
+export default function PortfolioSidebar({ categories, activeId, onSelect, variant = 'all' }) {
+  if (variant === 'mobile') {
+    return (
+      <MobileCategorySlider
+        categories={categories}
+        activeId={activeId}
+        onSelect={onSelect}
+      />
+    )
+  }
+
+  if (variant === 'desktop') {
+    return (
+      <DesktopSidebar
+        categories={categories}
+        activeId={activeId}
+        onSelect={onSelect}
+      />
+    )
+  }
+
   return (
     <>
       <MobileCategorySlider
