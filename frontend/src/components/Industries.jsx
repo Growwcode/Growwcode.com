@@ -2,145 +2,96 @@ import { Link } from 'react-router-dom'
 
 const INDUSTRIES = [
   {
-    title: 'Healthcare',
-    description:
-      'We build HIPAA-aware platforms, patient portals, telemedicine apps, and AI diagnostics tools that help healthcare providers deliver better care at scale.',
-    highlights: ['Patient portals & telemedicine', 'AI diagnostics & analytics', 'Secure cloud infrastructure'],
-    accent: 'from-navy to-navy-light',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-20 w-20" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path d="M12 6v12M6 12h12" />
-        <rect x="3" y="3" width="18" height="18" rx="3" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Finance & Banking',
-    description:
-      'Secure fintech applications, payment gateways, trading dashboards, and compliance-ready systems built for the highest standards of data protection.',
-    highlights: ['Payment & banking apps', 'Fraud detection with AI', 'Regulatory compliance'],
-    accent: 'from-navy-dark to-navy',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-20 w-20" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <rect x="2" y="6" width="20" height="14" rx="2" />
-        <path d="M2 10h20M6 14h4" />
-      </svg>
-    ),
-  },
-  {
     title: 'E-Commerce & Retail',
     description:
       'High-converting online stores, inventory management, AI recommendation engines, and seamless omnichannel experiences that drive sales growth.',
     highlights: ['Custom e-commerce platforms', 'Inventory & order systems', 'Personalized shopping AI'],
-    accent: 'from-navy-light to-navy-accent',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-20 w-20" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path d="M6 6h15l-1.5 9h-12z" />
-        <circle cx="9" cy="20" r="1.5" />
-        <circle cx="18" cy="20" r="1.5" />
-        <path d="M6 6L5 3H2" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Education & EdTech',
-    description:
-      'Learning management systems, virtual classrooms, and AI tutors that personalize education and improve outcomes for students and institutions.',
-    highlights: ['LMS & virtual classrooms', 'AI-powered tutoring', 'Student analytics dashboards'],
-    accent: 'from-navy to-navy-dark',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-20 w-20" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path d="M12 3L2 8l10 5 10-5-10-5z" />
-        <path d="M6 10v5c0 2 3 4 6 4s6-2 6-4v-5" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Manufacturing',
-    description:
-      'IoT integrations, predictive maintenance, ERP connectors, and smart factory automation that optimize production and reduce downtime.',
-    highlights: ['IoT & sensor integration', 'Predictive maintenance AI', 'ERP & MES connectivity'],
-    accent: 'from-navy-dark to-navy-light',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-20 w-20" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <rect x="2" y="8" width="20" height="12" rx="2" />
-        <path d="M6 8V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3" />
-        <circle cx="8" cy="14" r="1.5" fill="currentColor" />
-        <circle cx="16" cy="14" r="1.5" fill="currentColor" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Real Estate',
-    description:
-      'Property listing platforms, CRM tools, virtual tour experiences, and market analytics dashboards that help agencies close deals faster.',
-    highlights: ['Property listing portals', 'Virtual tours & 3D views', 'Market data analytics'],
-    accent: 'from-navy-light to-navy',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-20 w-20" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path d="M3 11l9-8 9 8" />
-        <path d="M5 10v10h14V10" />
-        <rect x="10" y="14" width="4" height="6" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Logistics & Supply Chain',
-    description:
-      'Fleet tracking, warehouse management, route optimization, and real-time shipment visibility tools that keep your supply chain moving.',
-    highlights: ['Fleet & GPS tracking', 'Warehouse management', 'Route optimization AI'],
-    accent: 'from-navy to-navy-accent',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-20 w-20" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <rect x="1" y="6" width="15" height="10" rx="1" />
-        <path d="M16 10h4l2 3v3h-6v-6z" />
-        <circle cx="6" cy="18" r="2" />
-        <circle cx="18" cy="18" r="2" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Startups & SaaS',
-    description:
-      'Rapid MVP development, scalable SaaS architecture, and agile product iteration — from validated idea to market-ready platform.',
-    highlights: ['MVP in weeks, not months', 'Scalable SaaS architecture', 'Product-market fit tooling'],
-    accent: 'from-navy-dark to-navy-accent',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-20 w-20" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-      </svg>
-    ),
+    image:
+      'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780830963/ChatGPT_Image_Jun_7_2026_04_43_33_PM_hcnlz0.png',
   },
   {
     title: 'Hospitality & Travel',
     description:
       'Booking engines, guest experience apps, loyalty programs, and AI concierge services that elevate every touchpoint of the journey.',
     highlights: ['Booking & reservation systems', 'Guest mobile apps', 'AI concierge chatbots'],
-    accent: 'from-navy-light to-navy-dark',
-    icon: (
-      <svg viewBox="0 0 24 24" className="h-20 w-20" fill="none" stroke="currentColor" strokeWidth="1.2">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" />
-      </svg>
-    ),
+    image:
+      'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780831034/ChatGPT_Image_Jun_7_2026_04_46_49_PM_q2nybg.png',
+  },
+  {
+    title: 'Startups & SaaS',
+    description:
+      'Rapid MVP development, scalable SaaS architecture, and agile product iteration — from validated idea to market-ready platform.',
+    highlights: ['MVP in weeks, not months', 'Scalable SaaS architecture', 'Product-market fit tooling'],
+    image:
+      'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780831100/ChatGPT_Image_Jun_7_2026_04_48_01_PM_nc0xhq.png',
+  },
+  {
+    title: 'Healthcare',
+    description:
+      'We build HIPAA-aware platforms, patient portals, telemedicine apps, and AI diagnostics tools that help healthcare providers deliver better care at scale.',
+    highlights: ['Patient portals & telemedicine', 'AI diagnostics & analytics', 'Secure cloud infrastructure'],
+    image:
+      'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780832080/ChatGPT_Image_Jun_7_2026_04_56_45_PM_ice6d2.png',
+  },
+  {
+    title: 'Finance & Banking',
+    description:
+      'Secure fintech applications, payment gateways, trading dashboards, and compliance-ready systems built for the highest standards of data protection.',
+    highlights: ['Payment & banking apps', 'Fraud detection with AI', 'Regulatory compliance'],
+    image:
+      'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780832140/ChatGPT_Image_Jun_7_2026_05_05_24_PM_erdwyc.png',
+  },
+  {
+    title: 'Education & EdTech',
+    description:
+      'Learning management systems, virtual classrooms, and AI tutors that personalize education and improve outcomes for students and institutions.',
+    highlights: ['LMS & virtual classrooms', 'AI-powered tutoring', 'Student analytics dashboards'],
+    image:
+      'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780833093/ChatGPT_Image_Jun_7_2026_05_21_10_PM_uuznba.png',
+  },
+  {
+    title: 'Manufacturing',
+    description:
+      'IoT integrations, predictive maintenance, ERP connectors, and smart factory automation that optimize production and reduce downtime.',
+    highlights: ['IoT & sensor integration', 'Predictive maintenance AI', 'ERP & MES connectivity'],
+    image:
+      'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780832983/ChatGPT_Image_Jun_7_2026_05_19_21_PM_orlnlv.png',
+  },
+  {
+    title: 'Real Estate',
+    description:
+      'Property listing platforms, CRM tools, virtual tour experiences, and market analytics dashboards that help agencies close deals faster.',
+    highlights: ['Property listing portals', 'Virtual tours & 3D views', 'Market data analytics'],
+    image:
+      'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780832615/ChatGPT_Image_Jun_7_2026_05_13_17_PM_gwvqsb.png',
+  },
+  {
+    title: 'Logistics & Supply Chain',
+    description:
+      'Fleet tracking, warehouse management, route optimization, and real-time shipment visibility tools that keep your supply chain moving.',
+    highlights: ['Fleet & GPS tracking', 'Warehouse management', 'Route optimization AI'],
+    image:
+      'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780831252/ChatGPT_Image_Jun_7_2026_04_50_20_PM_hzik5h.png',
   },
 ]
 
-function IndustryVisual({ industry, index }) {
-  return (
-    <div
-      className={`relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-3xl bg-gradient-to-br ${industry.accent} shadow-lg shadow-navy/10`}
-    >
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute -left-8 -top-8 h-40 w-40 rounded-full border-[20px] border-white" />
-        <div className="absolute -bottom-6 -right-6 h-32 w-32 rounded-full border-[14px] border-white" />
-        <div className="absolute right-12 top-12 h-3 w-3 rounded-full bg-white" />
-        <div className="absolute bottom-16 left-16 h-2 w-2 rounded-full bg-white/60" />
+function IndustryVisual({ industry }) {
+  if (industry.image) {
+    return (
+      <div className="overflow-hidden rounded-2xl bg-white">
+        <img
+          src={industry.image}
+          alt={`${industry.title} solutions by GrowwCode`}
+          className="h-auto w-full object-contain"
+          loading="lazy"
+        />
       </div>
-      <div className="relative text-white/90">{industry.icon}</div>
-      <span className="absolute left-6 top-6 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
-        {String(index + 1).padStart(2, '0')}
-      </span>
+    )
+  }
+
+  return (
+    <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-navy to-navy-light shadow-lg shadow-navy/10">
+      <span className="px-6 text-center text-lg font-bold text-white">{industry.title}</span>
     </div>
   )
 }
@@ -151,7 +102,7 @@ function IndustryRow({ industry, index }) {
   return (
     <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
       <div className={imageFirst ? 'lg:order-1' : 'lg:order-2'}>
-        <IndustryVisual industry={industry} index={index} />
+        <IndustryVisual industry={industry} />
       </div>
 
       <div className={imageFirst ? 'lg:order-2' : 'lg:order-1'}>
