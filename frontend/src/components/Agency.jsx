@@ -43,18 +43,10 @@ function TeamPhoto({ visible }) {
         aria-hidden="true"
         className="absolute -right-4 top-8 h-24 w-24 rounded-full bg-gc-blue/10 blur-2xl"
       />
-      <div
-        aria-hidden="true"
-        className="absolute bottom-6 left-0 h-12 w-12 border-b-2 border-l-2 border-gc-navy/20 transition-colors duration-500 group-hover:border-gc-blue/45"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute right-0 top-0 h-12 w-12 border-r-2 border-t-2 border-gc-navy/20 transition-colors duration-500 group-hover:border-gc-blue/45"
-      />
       <img
         src={WHO_WE_ARE_IMAGE}
         alt="GrowwCode team collaborating in the office"
-        className="relative z-10 h-auto w-full max-w-md object-cover drop-shadow-[0_28px_56px_rgba(0,127,252,0.18)] transition-transform duration-700 group-hover:scale-[1.02] group-hover:-translate-y-1"
+        className="relative z-10 h-auto w-full max-w-md rounded-2xl border border-gc-blue/20 object-cover shadow-[0_24px_48px_rgba(1,44,100,0.12)] ring-1 ring-gc-navy/10 transition-all duration-700 group-hover:-translate-y-1 group-hover:scale-[1.02] group-hover:border-gc-blue/35 group-hover:shadow-[0_28px_56px_rgba(0,127,252,0.18)] group-hover:ring-gc-blue/25"
         loading="lazy"
       />
     </div>
