@@ -19,15 +19,6 @@ const VALUES = [
   },
 ]
 
-const EXPERTISE = [
-  'Web Development',
-  'Mobile Apps',
-  'AI / ML',
-  'AI Agents',
-  'Cloud (AWS, Azure, GCP)',
-  'DevOps & Automation',
-]
-
 const VALUE_REVEAL_DELAYS = ['reveal-delay-1', 'reveal-delay-2', 'reveal-delay-3']
 
 function TeamPhoto({ visible }) {
@@ -149,23 +140,6 @@ export default function Agency() {
           <div className="flex flex-col items-center lg:items-end">
             <TeamPhoto visible={whoVisible} />
             <TeamQuote visible={whoVisible} />
-          </div>
-        </div>
-
-        <div className={`mt-20 reveal reveal-delay-2 ${whoVisible ? 'is-visible' : ''}`}>
-          <h4 className="text-lg font-bold text-gc-navy">Core expertise</h4>
-          <p className="mt-2 max-w-xl text-sm text-gc-navy/60">
-            End-to-end capabilities across the full technology stack.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {EXPERTISE.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full bg-gc-blue/10 px-5 py-2.5 text-sm font-medium text-gc-navy"
-              >
-                {skill}
-              </span>
-            ))}
           </div>
         </div>
       </div>
