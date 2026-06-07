@@ -123,11 +123,7 @@ export default function Agency() {
       <div ref={whoRef} className="relative mx-auto max-w-6xl px-6 lg:px-8">
         <div className="mt-10 grid items-start gap-12 sm:mt-12 lg:grid-cols-2 lg:gap-16">
           <div className={`reveal-left ${whoVisible ? 'is-visible' : ''}`}>
-            <p className="text-sm font-semibold uppercase tracking-widest text-gc-blue">
-              Our team
-            </p>
-            <h3 className="mt-2 text-2xl font-bold text-gc-navy sm:text-3xl">Who we are</h3>
-            <div className="mt-3 h-1 w-12 rounded-full bg-gradient-to-r from-gc-navy to-gc-blue" />
+            <h3 className="text-2xl font-bold text-gc-navy sm:text-3xl">Who we are</h3>
             <p className="mt-5 text-base leading-relaxed text-gc-navy/70">
               We are a team of developers, designers, and AI engineers passionate about building
               products that matter. From startups to enterprises, we partner with clients to turn

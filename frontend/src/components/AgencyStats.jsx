@@ -108,7 +108,7 @@ function StatRing({ value, labelLines, ringText, index }) {
 export default function AgencyStats() {
   return (
     <div className="mt-6 py-2 sm:mt-8 sm:py-3 lg:mt-10 lg:py-4">
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-8 gap-y-8 px-4 sm:gap-x-12 sm:gap-y-10 sm:px-6 lg:grid-cols-4 lg:gap-x-16 lg:gap-y-6 lg:px-8 xl:gap-x-24">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-6 sm:gap-x-8 sm:gap-y-10 lg:grid-cols-4 lg:gap-x-10 lg:gap-y-6 lg:px-8">
         {STATS.map((stat, index) => (
           <StatRing key={stat.value} index={index} {...stat} />
         ))}

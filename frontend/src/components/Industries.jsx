@@ -336,10 +336,7 @@ export default function Industries() {
             Sector expertise
           </p>
           <h1 className="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-gc-navy sm:text-4xl lg:text-5xl">
-            Industries we{' '}
-            <span className="bg-gradient-to-r from-navy to-navy-accent bg-clip-text text-transparent">
-              serve
-            </span>
+            Industries we serve
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-gc-navy/70">
             We partner with organizations across sectors to deliver tailored IT solutions.
