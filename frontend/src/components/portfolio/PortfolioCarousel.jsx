@@ -16,14 +16,14 @@ function PlaceholderSlide({ label, index, total }) {
 
 function CarouselNav({ onPrev, onNext }) {
   return (
-    <div className="absolute right-3 top-3 z-10 flex gap-1 rounded-2xl bg-gc-navy p-1 sm:right-4 sm:top-4">
+    <div className="absolute right-2 top-2 z-10 flex gap-1 rounded-xl bg-gc-navy p-0.5 sm:right-4 sm:top-4 sm:rounded-2xl sm:p-1">
       <button
         type="button"
         onClick={onPrev}
         aria-label="Previous project"
-        className="flex h-9 w-9 items-center justify-center rounded-xl bg-gc-blue text-white transition hover:bg-gc-blue/85"
+        className="flex h-8 w-8 items-center justify-center rounded-lg bg-gc-blue text-white transition hover:bg-gc-blue/85 sm:h-9 sm:w-9 sm:rounded-xl"
       >
-        <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5">
+        <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" stroke="currentColor" strokeWidth="2.5">
           <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>
@@ -31,9 +31,9 @@ function CarouselNav({ onPrev, onNext }) {
         type="button"
         onClick={onNext}
         aria-label="Next project"
-        className="flex h-9 w-9 items-center justify-center rounded-xl bg-gc-blue text-white transition hover:bg-gc-blue/85"
+        className="flex h-8 w-8 items-center justify-center rounded-lg bg-gc-blue text-white transition hover:bg-gc-blue/85 sm:h-9 sm:w-9 sm:rounded-xl"
       >
-        <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.5">
+        <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" stroke="currentColor" strokeWidth="2.5">
           <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </button>
@@ -43,12 +43,12 @@ function CarouselNav({ onPrev, onNext }) {
 
 function ProjectDetails({ project, categoryLabel }) {
   return (
-    <div className="mt-6 space-y-4 rounded-2xl bg-gc-navy px-6 py-6 sm:px-8 sm:py-8">
-      <p className="text-sm font-bold tracking-[0.2em] text-gc-blue">{categoryLabel}</p>
+    <div className="mt-4 space-y-4 rounded-2xl bg-gc-navy px-4 py-5 sm:mt-6 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
+      <p className="text-xs font-bold tracking-[0.2em] text-gc-blue sm:text-sm">{categoryLabel}</p>
 
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <div>
-          <h2 className="text-xl font-bold text-white sm:text-2xl">{project.title}</h2>
+      <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
+        <div className="min-w-0">
+          <h2 className="text-lg font-bold text-white sm:text-xl lg:text-2xl">{project.title}</h2>
           {project.tags?.length > 0 && (
             <div className="mt-2 flex flex-wrap gap-2">
               {project.tags.map((tag) => (
@@ -67,7 +67,7 @@ function ProjectDetails({ project, categoryLabel }) {
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full bg-gc-blue px-4 py-2 text-sm font-semibold text-white transition hover:bg-gc-blue/90"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gc-blue px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-gc-blue/90 sm:w-auto sm:justify-start"
           >
             Visit Website
             <svg viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor" aria-hidden="true">
@@ -83,7 +83,7 @@ function ProjectDetails({ project, categoryLabel }) {
       )}
 
       {project.adminPanel && (
-        <div className="rounded-xl border border-gc-blue/25 bg-gc-blue/10 p-4 sm:p-5">
+        <div className="rounded-xl border border-gc-blue/25 bg-gc-blue/10 p-3.5 sm:p-4 lg:p-5">
           <h3 className="text-sm font-bold uppercase tracking-wide text-gc-blue">
             Admin Panel
           </h3>
@@ -100,7 +100,7 @@ function ProjectDetails({ project, categoryLabel }) {
       )}
 
       {project.devOps && (
-        <div className="rounded-xl border border-gc-blue/25 bg-gc-blue/10 p-4 sm:p-5">
+        <div className="rounded-xl border border-gc-blue/25 bg-gc-blue/10 p-3.5 sm:p-4 lg:p-5">
           <h3 className="text-sm font-bold uppercase tracking-wide text-gc-blue">
             AWS & Deployment
           </h3>
@@ -160,7 +160,7 @@ export default function PortfolioCarousel({ category, images }) {
 
   return (
     <div>
-      <div className="relative mx-auto w-[90%] max-w-4xl overflow-hidden rounded-2xl bg-white shadow-lg shadow-gc-navy/10 ring-1 ring-gc-blue/20 sm:w-[88%]">
+      <div className="relative mx-auto w-full overflow-hidden rounded-xl bg-white shadow-lg shadow-gc-navy/10 ring-1 ring-gc-blue/20 sm:w-[92%] sm:rounded-2xl lg:w-[88%] lg:max-w-4xl">
         {total > 1 && <CarouselNav onPrev={goPrev} onNext={goNext} />}
 
         {current.src ? (

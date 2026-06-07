@@ -23,10 +23,37 @@ function SidebarThumbnail({ category, isActive }) {
   )
 }
 
-export default function PortfolioSidebar({ categories, activeId, onSelect }) {
+function MobileCategorySlider({ categories, activeId, onSelect }) {
   return (
-    <aside className="w-full shrink-0 rounded-2xl bg-gc-light p-4 sm:p-5">
-      <nav aria-label="Portfolio categories">
+    <nav aria-label="Work categories" className="lg:hidden">
+      <div className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {categories.map((category) => {
+          const isActive = category.id === activeId
+
+          return (
+            <button
+              key={category.id}
+              type="button"
+              onClick={() => onSelect(category.id)}
+              className={`shrink-0 snap-start rounded-full px-4 py-2.5 text-sm font-semibold whitespace-nowrap transition ${
+                isActive
+                  ? 'bg-gc-blue text-white shadow-md shadow-gc-blue/25'
+                  : 'bg-gc-light text-gc-navy/75 ring-1 ring-gc-navy/10 hover:text-gc-navy'
+              }`}
+            >
+              {category.displayLabel ?? category.label}
+            </button>
+          )
+        })}
+      </div>
+    </nav>
+  )
+}
+
+function DesktopSidebar({ categories, activeId, onSelect }) {
+  return (
+    <aside className="hidden w-full shrink-0 rounded-2xl bg-gc-light p-4 sm:p-5 lg:block">
+      <nav aria-label="Work categories">
         <ul className="space-y-3">
           {categories.map((category) => {
             const isActive = category.id === activeId
@@ -47,7 +74,7 @@ export default function PortfolioSidebar({ categories, activeId, onSelect }) {
                       isActive ? 'text-gc-navy' : 'text-gc-navy/70'
                     }`}
                   >
-                    {category.label}
+                    {category.displayLabel ?? category.label}
                   </span>
                   <SidebarThumbnail category={category} isActive={isActive} />
                 </button>
@@ -57,5 +84,22 @@ export default function PortfolioSidebar({ categories, activeId, onSelect }) {
         </ul>
       </nav>
     </aside>
+  )
+}
+
+export default function PortfolioSidebar({ categories, activeId, onSelect }) {
+  return (
+    <>
+      <MobileCategorySlider
+        categories={categories}
+        activeId={activeId}
+        onSelect={onSelect}
+      />
+      <DesktopSidebar
+        categories={categories}
+        activeId={activeId}
+        onSelect={onSelect}
+      />
+    </>
   )
 }

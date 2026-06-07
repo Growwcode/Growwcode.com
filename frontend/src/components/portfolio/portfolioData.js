@@ -77,24 +77,28 @@ export const PORTFOLIO_CATEGORIES = [
   {
     id: 'all',
     label: 'ALL',
+    displayLabel: 'All Work',
     thumbnail: webdevProjects[0].src,
     images: [...webdevProjects, ...appdevProjects, ...devopsProjects],
   },
   {
     id: 'webdev',
     label: 'WEBDEV',
+    displayLabel: 'Web Dev',
     thumbnail: webdevProjects[0].src,
     images: webdevProjects,
   },
   {
     id: 'appdev',
     label: 'APPDEV',
+    displayLabel: 'App Dev',
     thumbnail: null,
     images: appdevProjects,
   },
   {
     id: 'devops',
     label: 'DEVOPS',
+    displayLabel: 'DevOps',
     thumbnail: devopsProjects[0].src,
     images: devopsProjects,
   },
