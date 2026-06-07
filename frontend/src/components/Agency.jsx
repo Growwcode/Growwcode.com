@@ -15,7 +15,7 @@ function AgencyIllustration() {
       />
       <path d="M60 260 L320 260" stroke="#111" strokeWidth="2.5" />
       <line x1="190" y1="40" x2="190" y2="260" stroke="#e5e7eb" strokeWidth="1.5" />
-      <rect x="80" y="70" width="90" height="6" rx="3" fill="#0f2744" opacity="0.3" />
+      <rect x="80" y="70" width="90" height="6" rx="3" fill="#3f5bd9" opacity="0.3" />
       <rect x="80" y="90" width="70" height="4" rx="2" fill="#d1d5db" />
       <rect x="80" y="105" width="80" height="4" rx="2" fill="#d1d5db" />
       <rect x="80" y="120" width="60" height="4" rx="2" fill="#d1d5db" />
@@ -29,7 +29,7 @@ function AgencyIllustration() {
       <path d="M290 200 L272 175" stroke="#111" strokeWidth="2" />
       <rect x="215" y="213" width="20" height="30" rx="4" stroke="#111" strokeWidth="2" fill="#fff" />
       <rect x="265" y="213" width="20" height="30" rx="4" stroke="#111" strokeWidth="2" fill="#fff" />
-      <circle cx="340" cy="60" r="18" fill="#2563eb" opacity="0.15" />
+      <circle cx="340" cy="60" r="18" fill="#5b72e8" opacity="0.15" />
     </svg>
   )
 }
@@ -67,7 +67,7 @@ const EXPERTISE = [
 
 export default function Agency() {
   return (
-    <section id="agency" className="bg-gray-50/50 py-20 lg:py-28">
+    <section id="agency" className="bg-brand-50 py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-widest text-navy">
@@ -87,7 +87,7 @@ export default function Agency() {
           {STATS.map((stat) => (
             <div
               key={stat.label}
-              className="rounded-2xl border border-gray-100 bg-white px-6 py-8 text-center shadow-sm"
+              className="rounded-2xl border border-brand-100 bg-white px-6 py-8 text-center shadow-sm"
             >
               <p className="text-3xl font-bold text-navy">{stat.value}</p>
               <p className="mt-2 text-sm text-gray-500">{stat.label}</p>

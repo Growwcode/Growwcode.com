@@ -195,7 +195,7 @@ export default function Industries() {
           ))}
         </div>
 
-        <div className="mt-20 rounded-3xl bg-navy px-8 py-12 text-center sm:px-12 lg:mt-28">
+        <div className="mt-20 rounded-3xl bg-navy px-8 py-12 text-center shadow-xl shadow-navy/25 sm:px-12 lg:mt-28">
           <p className="text-xl font-semibold text-white">
             Don&apos;t see your industry listed?
           </p>
@@ -205,7 +205,7 @@ export default function Industries() {
           </p>
           <Link
             to="/#contact"
-            className="mt-8 inline-block rounded-lg bg-white px-8 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-gray-100"
+            className="mt-8 inline-block rounded-md bg-white px-8 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-brand-50"
           >
             Talk to our team
           </Link>

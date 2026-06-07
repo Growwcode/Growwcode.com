@@ -83,7 +83,7 @@ export default function Services() {
         {SERVICES.map((service) => (
           <div
             key={service.title}
-            className="rounded-2xl border border-gray-100 bg-white p-8 transition-shadow hover:shadow-lg hover:shadow-navy/5"
+            className="rounded-2xl border border-brand-100 bg-white p-8 transition-all hover:border-brand-200 hover:shadow-lg hover:shadow-navy/10"
           >
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy/10 text-navy">
               {service.icon}

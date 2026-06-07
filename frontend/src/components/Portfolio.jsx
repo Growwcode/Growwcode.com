@@ -21,7 +21,7 @@ const PROJECTS = [
     id: 3,
     title: 'E-Commerce Web Application',
     category: 'Web Development',
-    bg: 'bg-white border border-gray-200',
+    bg: 'bg-white border border-brand-200',
     tag: 'Website',
     dark: false,
   },
@@ -36,7 +36,7 @@ const PROJECTS = [
     id: 5,
     title: 'Predictive Analytics Dashboard',
     category: 'AI/ML',
-    bg: 'bg-white border border-gray-200',
+    bg: 'bg-white border border-brand-200',
     tag: 'AI/ML',
     dark: false,
   },
@@ -76,11 +76,11 @@ function ProjectCard({ project }) {
         }`}
       >
         <svg viewBox="0 0 120 80" className="h-20 w-32 opacity-60" aria-hidden="true">
-          <rect x="10" y="10" width="100" height="60" rx="6" stroke={isDark ? '#fff' : '#0f2744'} strokeWidth="1.5" fill="none" />
-          <rect x="20" y="22" width="50" height="4" rx="2" fill={isDark ? '#fff' : '#0f2744'} opacity="0.4" />
-          <rect x="20" y="32" width="70" height="3" rx="1.5" fill={isDark ? '#fff' : '#0f2744'} opacity="0.25" />
-          <rect x="20" y="40" width="60" height="3" rx="1.5" fill={isDark ? '#fff' : '#0f2744'} opacity="0.25" />
-          <rect x="20" y="52" width="30" height="10" rx="3" fill={isDark ? '#fff' : '#0f2744'} opacity="0.5" />
+          <rect x="10" y="10" width="100" height="60" rx="6" stroke={isDark ? '#fff' : '#3f5bd9'} strokeWidth="1.5" fill="none" />
+          <rect x="20" y="22" width="50" height="4" rx="2" fill={isDark ? '#fff' : '#3f5bd9'} opacity="0.4" />
+          <rect x="20" y="32" width="70" height="3" rx="1.5" fill={isDark ? '#fff' : '#3f5bd9'} opacity="0.25" />
+          <rect x="20" y="40" width="60" height="3" rx="1.5" fill={isDark ? '#fff' : '#3f5bd9'} opacity="0.25" />
+          <rect x="20" y="52" width="30" height="10" rx="3" fill={isDark ? '#fff' : '#3f5bd9'} opacity="0.5" />
         </svg>
       </div>
     </article>
@@ -94,7 +94,7 @@ export default function Portfolio() {
     active === 'All' ? PROJECTS : PROJECTS.filter((p) => p.category === active)
 
   return (
-    <section className="bg-gray-50/50 py-20 lg:py-28">
+    <section className="bg-brand-50 py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Portfolio
@@ -113,7 +113,7 @@ export default function Portfolio() {
               className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${
                 active === cat
                   ? 'bg-navy text-white'
-                  : 'bg-white text-gray-600 ring-1 ring-gray-200 hover:ring-navy/30'
+                  : 'bg-white text-slate-600 ring-1 ring-brand-200 hover:ring-navy/40'
               }`}
             >
               {cat}

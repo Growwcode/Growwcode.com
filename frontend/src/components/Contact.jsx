@@ -31,7 +31,7 @@ function ContactIllustration() {
       <rect x="175" y="60" width="55" height="90" rx="10" stroke="#111" strokeWidth="2" fill="#fff" />
       <rect x="183" y="72" width="39" height="55" rx="4" fill="#f0f4f8" />
       <circle cx="202" cy="138" r="6" stroke="#111" strokeWidth="1.5" fill="#fff" />
-      <path d="M60 100 L75 85 M55 110 L70 95" stroke="#0f2744" strokeWidth="2" strokeLinecap="round" />
+      <path d="M60 100 L75 85 M55 110 L70 95" stroke="#3f5bd9" strokeWidth="2" strokeLinecap="round" />
     </svg>
   )
 }
@@ -52,7 +52,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-gray-50/50 py-20 lg:py-28">
+    <section id="contact" className="bg-brand-50 py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
@@ -66,7 +66,7 @@ export default function Contact() {
 
             <a
               href="tel:+919876543210"
-              className="mt-8 inline-block rounded-lg bg-navy px-8 py-4 text-lg font-bold text-white transition-colors hover:bg-navy-light"
+              className="mt-8 inline-block rounded-md bg-navy px-8 py-4 text-lg font-bold text-white shadow-md shadow-navy/30 transition-colors hover:bg-navy-light"
             >
               +91 98765 43210
             </a>
@@ -87,7 +87,7 @@ export default function Contact() {
                   className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                     selectedServices.includes(tag)
                       ? 'bg-navy text-white'
-                      : 'bg-white text-gray-600 ring-1 ring-gray-200 hover:ring-navy/30'
+                      : 'bg-white text-slate-600 ring-1 ring-brand-200 hover:ring-navy/40'
                   }`}
                 >
                   {tag}
@@ -110,29 +110,29 @@ export default function Contact() {
                     type="text"
                     placeholder="First name"
                     required
-                    className="w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-navy focus:ring-1 focus:ring-navy"
+                    className="w-full rounded-md border border-brand-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-navy focus:ring-2 focus:ring-navy/20"
                   />
                   <input
                     type="text"
                     placeholder="Last name"
                     required
-                    className="w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-navy focus:ring-1 focus:ring-navy"
+                    className="w-full rounded-md border border-brand-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-navy focus:ring-2 focus:ring-navy/20"
                   />
                 </div>
                 <input
                   type="email"
                   placeholder="Email address"
                   required
-                  className="w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-navy focus:ring-1 focus:ring-navy"
+                  className="w-full rounded-md border border-brand-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-navy focus:ring-2 focus:ring-navy/20"
                 />
                 <textarea
                   placeholder="Tell us about your project"
                   rows={4}
-                  className="w-full resize-none rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-navy focus:ring-1 focus:ring-navy"
+                  className="w-full resize-none rounded-md border border-brand-200 bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-navy focus:ring-2 focus:ring-navy/20"
                 />
                 <button
                   type="submit"
-                  className="w-full rounded-lg bg-navy py-3.5 text-sm font-semibold text-white transition-colors hover:bg-navy-light sm:w-auto sm:px-10"
+                  className="w-full rounded-md bg-navy py-3.5 text-sm font-semibold text-white shadow-md shadow-navy/30 transition-colors hover:bg-navy-light sm:w-auto sm:px-10"
                 >
                   Make contact
                 </button>
