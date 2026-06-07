@@ -26,3 +26,46 @@ body {
   background: #3f5bd9;
   color: #fff;
 }
+
+@keyframes stat-ring-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.stat-ring-rotate {
+  transform-origin: 110px 110px;
+  animation: stat-ring-spin 20s linear infinite;
+}
+
+.stat-ring-item {
+  min-height: 160px;
+  min-width: 0;
+}
+
+@media (min-width: 640px) {
+  .stat-ring-item {
+    min-height: 190px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stat-ring-item {
+    min-height: 230px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .stat-ring-item {
+    min-height: 240px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-ring-rotate {
+    animation: none;
+  }
+}

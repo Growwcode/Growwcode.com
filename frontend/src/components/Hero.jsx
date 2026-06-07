@@ -6,9 +6,6 @@ export default function Hero() {
     <section id="home" className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-24">
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
-          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-navy">
-            Full-stack IT partner
-          </p>
           <h1 className="text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
             Smart IT solutions for unprecedented results
           </h1>

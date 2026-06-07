@@ -1,3 +1,5 @@
+import AgencyStats from './AgencyStats.jsx'
+
 function AgencyIllustration() {
   return (
     <svg
@@ -33,13 +35,6 @@ function AgencyIllustration() {
     </svg>
   )
 }
-
-const STATS = [
-  { value: '50+', label: 'Projects delivered' },
-  { value: '30+', label: 'Happy clients' },
-  { value: '5+', label: 'Years of experience' },
-  { value: '24/7', label: 'Support & maintenance' },
-]
 
 const VALUES = [
   {
@@ -82,20 +77,12 @@ export default function Agency() {
             to deliver solutions that scale with your ambition.
           </p>
         </div>
+      </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
-          {STATS.map((stat) => (
-            <div
-              key={stat.label}
-              className="rounded-2xl border border-brand-100 bg-white px-6 py-8 text-center shadow-sm"
-            >
-              <p className="text-3xl font-bold text-navy">{stat.value}</p>
-              <p className="mt-2 text-sm text-gray-500">{stat.label}</p>
-            </div>
-          ))}
-        </div>
+      <AgencyStats />
 
-        <div className="mt-20 grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="mt-10 grid items-center gap-14 sm:mt-12 lg:grid-cols-2 lg:gap-20">
           <div>
             <h3 className="text-2xl font-bold text-gray-900 sm:text-3xl">Who we are</h3>
             <p className="mt-5 text-base leading-relaxed text-gray-600">
