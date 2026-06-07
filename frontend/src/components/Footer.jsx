@@ -5,8 +5,8 @@ const LOGO_URL =
 
 export default function Footer() {
   return (
-    <footer className="border-t border-brand-100 bg-white">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 sm:flex-row lg:px-8">
+    <footer className="border-t border-brand-100 bg-white pb-[calc(1.5rem+var(--contact-notch-height)+env(safe-area-inset-bottom,0px))] pt-10">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 sm:flex-row lg:px-8">
         <Link to="/" className="inline-flex shrink-0 items-center">
           <img src={LOGO_URL} alt="GrowwCode" className="h-5 w-auto sm:h-6" />
         </Link>

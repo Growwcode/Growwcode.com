@@ -200,9 +200,7 @@ export default function Portfolio() {
           <main className="min-w-0">
             <div className="mb-4 flex flex-col gap-3 sm:mb-5 sm:flex-row sm:items-end sm:justify-between">
               <div className="min-w-0">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 sm:text-xs">
-                  Selected work
-                </p>
+                
                 <h2 className="mt-1 truncate text-2xl font-black text-gc-navy sm:mt-2 sm:text-3xl">
                   {activeCategory.displayLabel ?? activeCategory.label}
                 </h2>

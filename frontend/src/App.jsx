@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header.jsx'
+import ContactNowNotch from './components/ContactNowNotch.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import HomePage from './pages/HomePage.jsx'
 import IndustriesPage from './pages/IndustriesPage.jsx'
@@ -23,6 +24,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
+        <ContactNowNotch />
       </div>
     </BrowserRouter>
   )

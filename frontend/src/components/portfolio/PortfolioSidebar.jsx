@@ -29,9 +29,7 @@ function DesktopSidebar({ categories, activeId, onSelect }) {
   return (
     <aside className="hidden lg:block lg:w-full">
       <div className="mb-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-          Explore
-        </p>
+        
         <h3 className="mt-1 text-lg font-bold text-gc-navy">Categories</h3>
       </div>
 
