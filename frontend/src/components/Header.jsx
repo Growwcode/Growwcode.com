@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
+const LOGO_URL =
+  'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780833773/growwcodeLogo_vywavp.png'
+
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'Agency', to: '/#agency' },
@@ -26,8 +29,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-brand-100 bg-white shadow-sm">
       <div className="mx-auto max-w-6xl px-6 py-4 lg:px-8">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-xl font-bold tracking-tight text-navy" onClick={closeMenu}>
-            Groww<span className="font-normal text-slate-400">Code</span>
+          <Link to="/" className="inline-flex shrink-0 items-center" onClick={closeMenu}>
+            <img
+              src={LOGO_URL}
+              alt="GrowwCode"
+              className="h-8 w-auto sm:h-9"
+            />
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">
