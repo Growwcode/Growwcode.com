@@ -6,7 +6,6 @@ const LOGO_URL =
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
-  { label: 'Agency', to: '/#agency' },
   { label: 'Work', to: '/portfolio' },
   { label: 'Services', to: '/services' },
   { label: 'Industries', to: '/industries' },
