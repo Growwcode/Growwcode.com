@@ -69,7 +69,7 @@ function ProjectDetails({ project, categoryLabel }) {
             rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gc-blue px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-gc-blue/90 sm:w-auto sm:justify-start"
           >
-            Visit Website
+            {project.linkLabel ?? 'Visit Website'}
             <svg viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor" aria-hidden="true">
               <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
               <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
@@ -90,6 +90,23 @@ function ProjectDetails({ project, categoryLabel }) {
           <p className="mt-1 text-sm text-white/80">{project.adminPanel.summary}</p>
           <ul className="mt-3 space-y-1.5">
             {project.adminPanel.features.map((feature) => (
+              <li key={feature} className="flex gap-2 text-sm text-white/85">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gc-blue" />
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {project.playStore && (
+        <div className="rounded-xl border border-gc-blue/25 bg-gc-blue/10 p-3.5 sm:p-4 lg:p-5">
+          <h3 className="text-sm font-bold uppercase tracking-wide text-gc-blue">
+            Play Store Hosting
+          </h3>
+          <p className="mt-1 text-sm text-white/80">{project.playStore.summary}</p>
+          <ul className="mt-3 space-y-1.5">
+            {project.playStore.features.map((feature) => (
               <li key={feature} className="flex gap-2 text-sm text-white/85">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gc-blue" />
                 {feature}

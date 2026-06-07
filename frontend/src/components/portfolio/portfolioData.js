@@ -68,9 +68,29 @@ const devopsProjects = [
 ]
 
 const appdevProjects = [
-  { id: 'appdev-1', src: null, alt: 'App development project 1', title: 'Coming Soon' },
-  { id: 'appdev-2', src: null, alt: 'App development project 2', title: 'Coming Soon' },
-  { id: 'appdev-3', src: null, alt: 'App development project 3', title: 'Coming Soon' },
+  {
+    id: 'restrobazaar',
+    title: 'RestroBazaar',
+    src: 'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780838124/Appdev-restroBazaar_arxla6.png',
+    alt: 'RestroBazaar — food packaging and restaurant supplies mobile app',
+    url: 'https://play.google.com/store/apps/details?id=com.akenterprises.restrobazaar',
+    linkLabel: 'View on Play Store',
+    description:
+      'Your one-stop destination for all restaurant supplies and catering needs. Quality products, fast delivery, and exceptional service. Cross-platform mobile app for restaurants and caterers to browse, shop, and order premium food packaging and disposable supplies with ease.',
+    tags: ['Mobile App', 'Food Packaging', 'E-Commerce'],
+    playStore: {
+      summary:
+        'GrowwCode developed, deployed, and hosted RestroBazaar on the Google Play Store.',
+      features: [
+        'Published and live on Google Play Store',
+        'End-to-end mobile development and Play Store listing setup',
+        'OTP login, cart, wishlist, and multiple address management',
+        'Secure payments with COD and online checkout (Razorpay)',
+        'Real-time order tracking, history, and push notifications',
+        'Built with Flutter, Node.js, MongoDB, Firebase & REST APIs',
+      ],
+    },
+  },
 ]
 
 export const PORTFOLIO_CATEGORIES = [
@@ -92,7 +112,7 @@ export const PORTFOLIO_CATEGORIES = [
     id: 'appdev',
     label: 'APPDEV',
     displayLabel: 'App Dev',
-    thumbnail: null,
+    thumbnail: appdevProjects[0].src,
     images: appdevProjects,
   },
   {
