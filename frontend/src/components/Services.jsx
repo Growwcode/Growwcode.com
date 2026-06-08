@@ -1,6 +1,9 @@
+import { Link } from 'react-router-dom'
+
 const SERVICES = [
   {
     title: 'Website Development',
+    link: '/web-development-services',
     description:
       'Responsive, fast, and SEO-optimized websites built with modern frameworks like React, Next.js, and Node.js.',
     icon: (
@@ -12,6 +15,7 @@ const SERVICES = [
   },
   {
     title: 'App Development',
+    link: '/mobile-app-development',
     description:
       'Native and cross-platform mobile apps for iOS and Android using React Native, Flutter, and Swift/Kotlin.',
     icon: (
@@ -48,6 +52,7 @@ const SERVICES = [
   },
   {
     title: 'Cloud Services',
+    link: '/aws-cloud-services',
     description:
       'Cloud architecture, DevOps, and managed infrastructure on AWS, Azure, and GCP with 99.9% uptime.',
     icon: (
@@ -80,18 +85,69 @@ export default function Services() {
       </p>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {SERVICES.map((service) => (
-          <div
-            key={service.title}
-            className="rounded-2xl border border-brand-100 bg-white p-8 transition-all hover:border-brand-200 hover:shadow-lg hover:shadow-gc-blue/10"
-          >
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gc-blue/10 text-gc-blue">
-              {service.icon}
+        {SERVICES.map((service) => {
+          const card = (
+            <>
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gc-blue/10 text-gc-blue">
+                {service.icon}
+              </div>
+              <h3 className="mt-5 text-lg font-bold text-gc-navy">{service.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gc-navy/60">{service.description}</p>
+              {service.link && (
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-gc-blue">
+                  Learn more
+                  <svg viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+                    <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
+                  </svg>
+                </span>
+              )}
+            </>
+          )
+
+          return service.link ? (
+            <Link
+              key={service.title}
+              to={service.link}
+              className="rounded-2xl border border-brand-100 bg-white p-8 transition-all hover:border-brand-200 hover:shadow-lg hover:shadow-gc-blue/10"
+            >
+              {card}
+            </Link>
+          ) : (
+            <div
+              key={service.title}
+              className="rounded-2xl border border-brand-100 bg-white p-8 transition-all hover:border-brand-200 hover:shadow-lg hover:shadow-gc-blue/10"
+            >
+              {card}
             </div>
-            <h3 className="mt-5 text-lg font-bold text-gc-navy">{service.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-gc-navy/60">{service.description}</p>
-          </div>
-        ))}
+          )
+        })}
+      </div>
+
+      <div className="mt-16 rounded-2xl border border-brand-100 bg-gc-light/40 p-8">
+        <h3 className="text-lg font-bold text-gc-navy">Specialized service pages</h3>
+        <p className="mt-2 text-sm text-gc-navy/60">
+          Explore in-depth guides for our core development and cloud offerings.
+        </p>
+        <nav className="mt-5 flex flex-wrap gap-3" aria-label="Service landing pages">
+          <Link to="/custom-software-development" className="text-sm font-medium text-gc-blue hover:underline">
+            Custom Software Development
+          </Link>
+          <Link to="/web-development-services" className="text-sm font-medium text-gc-blue hover:underline">
+            Web Development
+          </Link>
+          <Link to="/mobile-app-development" className="text-sm font-medium text-gc-blue hover:underline">
+            Mobile App Development
+          </Link>
+          <Link to="/react-development-company" className="text-sm font-medium text-gc-blue hover:underline">
+            React Development
+          </Link>
+          <Link to="/aws-cloud-services" className="text-sm font-medium text-gc-blue hover:underline">
+            AWS Cloud Services
+          </Link>
+          <Link to="/contact" className="text-sm font-medium text-gc-blue hover:underline">
+            Contact Us
+          </Link>
+        </nav>
       </div>
     </section>
   )

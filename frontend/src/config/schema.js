@@ -27,3 +27,18 @@ export const CONTACT_PAGE_SCHEMA = {
 }
 
 export const GLOBAL_SCHEMA = [ORGANIZATION_SCHEMA, WEBSITE_SCHEMA]
+
+export function createFAQSchema(faqs) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+}
