@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-
-const LOGO_URL =
-  'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780833773/growwcodeLogo_vywavp.png'
+import { LOGO_URL } from '../config/brand.js'
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },

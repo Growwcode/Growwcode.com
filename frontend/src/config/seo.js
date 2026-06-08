@@ -1,7 +1,8 @@
+import { LOGO_URL } from './brand.js'
+
 const SITE_URL = 'https://growwcode.com'
 
-const DEFAULT_OG_IMAGE =
-  'https://res.cloudinary.com/dm3wpwfay/image/upload/q_auto/f_auto/v1780835752/Untitled_design_36_lhpd78.png'
+const DEFAULT_OG_IMAGE = LOGO_URL
 
 export const PAGE_SEO = {
   home: {

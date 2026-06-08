@@ -1,11 +1,12 @@
 import { SITE_URL } from './seo.js'
+import { LOGO_URL } from './brand.js'
 
 export const ORGANIZATION_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'GrowwCode',
   url: SITE_URL,
-  logo: `${SITE_URL}/logo.png`,
+  logo: LOGO_URL,
   sameAs: [
     'https://www.instagram.com/growwcode',
     'https://www.linkedin.com/company/growwcode',

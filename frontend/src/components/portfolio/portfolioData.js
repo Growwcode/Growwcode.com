@@ -126,6 +126,26 @@ export function getPortfolioClients() {
     .map((project) => project.title)
 }
 
+/** Hero floating cards — Web Dev, App Dev, DevOps from portfolio categories. */
+export function getHeroWorkCategories() {
+  return ['appdev', 'devops']
+    .map((id) => {
+      const category = PORTFOLIO_CATEGORIES.find((cat) => cat.id === id)
+      if (!category) return null
+
+      const featured = category.images.find((project) => project.src) ?? category.images[0]
+
+      return {
+        id: category.id,
+        title: category.displayLabel,
+        tag: category.label,
+        src: category.thumbnail ?? featured?.src,
+        alt: featured?.alt ?? `${category.displayLabel} — GrowwCode portfolio`,
+      }
+    })
+    .filter(Boolean)
+}
+
 export const PORTFOLIO_CATEGORIES = [
   {
     id: 'all',
