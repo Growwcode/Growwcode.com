@@ -6,6 +6,8 @@ export default function Hero() {
   return (
     <section id="home" className="hero-section relative overflow-hidden">
       <div className="hero-section-bg" aria-hidden="true">
+        <div className="hero-section-mobile-photo" />
+        <div className="hero-section-mobile-overlay" />
         <div className="hero-section-mesh" />
         <div className="hero-section-glow hero-section-glow--left" />
         <div className="hero-section-glow hero-section-glow--right" />
