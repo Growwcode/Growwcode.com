@@ -421,9 +421,10 @@
   .hero-main {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    gap: 1.5rem;
+    gap: 1.75rem;
+    margin-inline: auto;
   }
 }
 
@@ -435,7 +436,7 @@
 @media (min-width: 1024px) {
   .hero-copy {
     text-align: left;
-    flex: 1 1 0;
+    flex: 0 0 auto;
     min-width: 0;
     width: auto;
     max-width: 34rem;
@@ -581,7 +582,7 @@
     flex: 0 0 auto;
     min-height: 28.5rem;
     margin-inline: 0;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .hero-float-stack {
