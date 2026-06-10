@@ -7,6 +7,9 @@ export const SERVICE_PAGE_LINKS = [
   { label: 'Mobile Apps', path: '/mobile-app-development' },
   { label: 'React Development', path: '/react-development-company' },
   { label: 'AWS Cloud', path: '/aws-cloud-services' },
+  { label: 'AI / ML', path: '/ai-ml-projects' },
+  { label: 'AI Agents', path: '/ai-agents' },
+  { label: 'IT Consulting', path: '/it-consulting' },
 ]
 
 const SHARED_FAQS = [
@@ -681,5 +684,269 @@ export const AWS_CLOUD_PAGE = {
     title: 'Ready to move to AWS with confidence?',
     description:
       'GrowwCode AWS cloud services help you build, migrate, and manage infrastructure that scales. Get a free cloud consultation today.',
+  },
+}
+
+export const AI_ML_PAGE = {
+  seoKey: 'aiMlProjects',
+  path: '/ai-ml-projects',
+  badge: 'AI / ML Projects',
+  h1: 'AI & Machine Learning Solutions for Real Business Data',
+  heroSubtitle:
+    'GrowwCode builds custom ML models, data pipelines, and predictive analytics that turn your data into actionable insights—not just dashboards.',
+  overview: {
+    title: 'Practical AI / ML engineering for growing teams',
+    paragraphs: [
+      'Most businesses sit on valuable data but lack the models and pipelines to use it. GrowwCode designs machine learning systems around your goals—forecasting demand, detecting fraud, personalizing experiences, or automating document processing. We focus on production-ready delivery, not experiments that never ship.',
+      'From data preparation to model training, deployment, and monitoring, our team handles the full lifecycle. We work with structured and unstructured data, integrate predictions into your existing apps, and document everything so your team can maintain and extend the system.',
+    ],
+  },
+  offerings: {
+    title: 'What we build',
+    subtitle: 'Focused AI / ML capabilities tailored to your use case.',
+    items: [
+      {
+        title: 'Predictive analytics',
+        description:
+          'Forecast sales, churn, inventory, and operational metrics using models trained on your historical data.',
+      },
+      {
+        title: 'Custom ML model development',
+        description:
+          'Classification, regression, recommendation, and NLP models built and tuned for your domain.',
+      },
+      {
+        title: 'Data pipelines & ETL',
+        description:
+          'Reliable ingestion, cleaning, and feature engineering workflows that keep models fed with quality data.',
+      },
+      {
+        title: 'MLOps & deployment',
+        description:
+          'Model serving, versioning, monitoring, and retraining pipelines on AWS or your preferred cloud.',
+      },
+    ],
+  },
+  technologies: {
+    title: 'Tools & frameworks',
+    subtitle: 'Modern stacks chosen for maintainability and scale.',
+    items: ['Python', 'TensorFlow', 'PyTorch', 'scikit-learn', 'Pandas', 'AWS SageMaker', 'MLflow', 'FastAPI'],
+  },
+  benefits: {
+    title: 'Why GrowwCode for AI / ML',
+    subtitle: 'Engineering discipline applied to intelligent systems.',
+    items: [
+      {
+        title: 'Business-first scoping',
+        description: 'We define measurable outcomes before choosing algorithms—so ML solves real problems.',
+      },
+      {
+        title: 'Production-ready delivery',
+        description: 'Models ship with APIs, monitoring, and documentation—not notebook-only prototypes.',
+      },
+      {
+        title: 'Transparent collaboration',
+        description: 'Regular demos, clear metrics, and honest guidance on what ML can and cannot do for your data.',
+      },
+    ],
+  },
+  faqTitle: 'AI / ML project FAQs',
+  faqs: [
+    {
+      question: 'What types of AI / ML projects do you take on?',
+      answer:
+        'We build forecasting tools, recommendation engines, document classifiers, anomaly detection, chatbot backends, and computer vision applications. If you have labeled or collectable data and a clear business outcome, we can scope a solution.',
+    },
+    {
+      question: 'How much data do we need to get started?',
+      answer:
+        'It depends on the problem. Some use cases need thousands of records; others can start with smaller datasets plus transfer learning. We assess your data during discovery and recommend a realistic path—even if that means starting with a simpler rules-plus-ML hybrid.',
+    },
+    {
+      question: 'Do you deploy and maintain models after launch?',
+      answer:
+        'Yes. We deploy models to cloud infrastructure with monitoring for drift and performance. We also offer ongoing support for retraining, feature updates, and integration changes as your product evolves.',
+    },
+  ],
+  cta: {
+    title: 'Ready to put your data to work?',
+    description:
+      'Tell us about your AI / ML goals. GrowwCode will help you scope, build, and deploy models that deliver measurable business value.',
+  },
+}
+
+export const AI_AGENTS_PAGE = {
+  seoKey: 'aiAgents',
+  path: '/ai-agents',
+  badge: 'AI Agents',
+  h1: 'Intelligent AI Agents for Support & Workflow Automation',
+  heroSubtitle:
+    'GrowwCode builds autonomous AI agents that handle customer queries, internal workflows, and decision support—integrated with the tools your team already uses.',
+  overview: {
+    title: 'Agents that work inside your operations',
+    paragraphs: [
+      'AI agents go beyond simple chatbots. They can read documents, call APIs, update CRMs, route tickets, and complete multi-step tasks with guardrails. GrowwCode designs agents around your processes—support, sales ops, HR onboarding, or field workflows—so automation feels natural, not bolted on.',
+      'We combine large language models with structured tools, retrieval systems, and human handoff flows. Every agent is built with logging, access controls, and fallback paths so your team stays in control while routine work gets handled faster.',
+    ],
+  },
+  offerings: {
+    title: 'Agent capabilities we deliver',
+    subtitle: 'From customer-facing assistants to internal copilots.',
+    items: [
+      {
+        title: 'Customer support agents',
+        description:
+          'Resolve common queries, triage tickets, and escalate to humans with full conversation context.',
+      },
+      {
+        title: 'Workflow automation agents',
+        description:
+          'Trigger actions across CRMs, email, spreadsheets, and internal APIs based on natural-language instructions.',
+      },
+      {
+        title: 'Knowledge-base assistants',
+        description:
+          'Answer questions from your docs, SOPs, and product manuals with cited, up-to-date responses.',
+      },
+      {
+        title: 'Decision-support copilots',
+        description:
+          'Summarize data, draft reports, and recommend next steps for sales, ops, and leadership teams.',
+      },
+    ],
+  },
+  technologies: {
+    title: 'Stack & integrations',
+    subtitle: 'Flexible architecture that connects to your ecosystem.',
+    items: ['OpenAI', 'LangChain', 'Python', 'Node.js', 'Vector DBs', 'REST APIs', 'Webhooks', 'AWS'],
+  },
+  benefits: {
+    title: 'Why build agents with GrowwCode',
+    subtitle: 'Reliable automation with engineering oversight.',
+    items: [
+      {
+        title: 'Guardrails built in',
+        description: 'Role-based access, approval steps, and audit logs keep agents safe and accountable.',
+      },
+      {
+        title: 'Integrates with your stack',
+        description: 'Agents connect to Zendesk, Slack, HubSpot, custom apps, and databases—not isolated demos.',
+      },
+      {
+        title: 'Iterative improvement',
+        description: 'We tune prompts, tools, and retrieval using real usage data so agents get smarter over time.',
+      },
+    ],
+  },
+  faqTitle: 'AI agents FAQs',
+  faqs: [
+    {
+      question: 'How are AI agents different from a regular chatbot?',
+      answer:
+        'Chatbots typically answer fixed FAQs. AI agents can take actions—look up orders, create tickets, update records, and run multi-step workflows—using tools and APIs connected to your systems.',
+    },
+    {
+      question: 'Can agents integrate with our existing software?',
+      answer:
+        'Yes. We integrate with CRMs, help desks, internal databases, and custom APIs. During discovery we map your tools and design agents that fit your current stack.',
+    },
+    {
+      question: 'How do you keep AI agents secure and reliable?',
+      answer:
+        'We implement authentication, scoped permissions, input validation, human escalation paths, and logging. Agents are tested against edge cases before production rollout.',
+    },
+  ],
+  cta: {
+    title: 'Want agents that actually do the work?',
+    description:
+      'Share your workflow challenges. GrowwCode will design AI agents that save time, reduce errors, and scale with your team.',
+  },
+}
+
+export const IT_CONSULTING_PAGE = {
+  seoKey: 'itConsulting',
+  path: '/it-consulting',
+  badge: 'IT Consulting',
+  h1: 'IT Consulting for Smarter Technology Decisions',
+  heroSubtitle:
+    'GrowwCode helps leadership teams audit systems, plan roadmaps, and execute digital transformation—with senior engineers who have shipped real products.',
+  overview: {
+    title: 'Strategic guidance backed by hands-on experience',
+    paragraphs: [
+      'Technology decisions have long-term cost. Wrong architecture, vendor lock-in, or unclear roadmaps slow growth and drain budgets. GrowwCode provides IT consulting that combines strategic advice with practical engineering insight—we have built the systems we recommend.',
+      'Whether you need a technology audit, cloud migration plan, team structure advice, or a build-vs-buy analysis, we deliver clear recommendations, documented findings, and optional hands-on support to implement the path forward.',
+    ],
+  },
+  offerings: {
+    title: 'Consulting services',
+    subtitle: 'Focused engagements that unblock your next move.',
+    items: [
+      {
+        title: 'Technology audits',
+        description:
+          'Assess codebases, infrastructure, security posture, and technical debt—with prioritized action plans.',
+      },
+      {
+        title: 'Architecture & roadmap planning',
+        description:
+          'Define scalable system designs, migration phases, and realistic timelines aligned to business goals.',
+      },
+      {
+        title: 'Digital transformation advisory',
+        description:
+          'Guide process digitization, tool selection, and change management for teams adopting new platforms.',
+      },
+      {
+        title: 'Team & delivery coaching',
+        description:
+          'Improve sprint practices, code review standards, and DevOps maturity with working engineers at the table.',
+      },
+    ],
+  },
+  technologies: {
+    title: 'Domains we advise on',
+    subtitle: 'Breadth across modern product and infrastructure stacks.',
+    items: ['Cloud (AWS/Azure/GCP)', 'React & Node.js', 'Microservices', 'DevOps', 'Security', 'Data platforms', 'AI adoption', 'Legacy modernization'],
+  },
+  benefits: {
+    title: 'Why clients choose GrowwCode consulting',
+    subtitle: 'Advice you can execute—not slide decks alone.',
+    items: [
+      {
+        title: 'Practitioner-led',
+        description: 'Consultants are senior engineers and architects who still build and deploy software.',
+      },
+      {
+        title: 'Clear, honest recommendations',
+        description: 'We tell you what is urgent, what can wait, and what not to build—no upsell pressure.',
+      },
+      {
+        title: 'Implementation optional',
+        description: 'Need help executing the plan? Our development and cloud teams can take it from strategy to launch.',
+      },
+    ],
+  },
+  faqTitle: 'IT consulting FAQs',
+  faqs: [
+    {
+      question: 'What does a typical consulting engagement look like?',
+      answer:
+        'We start with stakeholder interviews and system review, then deliver a findings report with recommendations, effort estimates, and phased priorities. Short audits may take two to three weeks; larger transformation roadmaps can span longer with milestone check-ins.',
+    },
+    {
+      question: 'Do you work alongside our in-house team?',
+      answer:
+        'Yes. We often partner with internal developers and IT staff—augmenting capacity, reviewing architecture, and transferring knowledge so your team owns the outcome.',
+    },
+    {
+      question: 'Can you help after the audit is complete?',
+      answer:
+        'Absolutely. Many clients retain GrowwCode for implementation, dedicated squads, or ongoing advisory as their roadmap evolves.',
+    },
+  ],
+  cta: {
+    title: 'Need clarity on your technology direction?',
+    description:
+      'Book a consultation with GrowwCode. We will help you assess, plan, and move forward with confidence.',
   },
 }

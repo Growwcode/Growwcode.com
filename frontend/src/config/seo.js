@@ -65,6 +65,24 @@ export const PAGE_SEO = {
     description:
       'GrowwCode provides AWS cloud services including architecture, migration, DevOps, serverless, and managed infrastructure on Amazon Web Services.',
   },
+  aiMlProjects: {
+    path: '/ai-ml-projects',
+    title: 'AI / ML Projects | GrowwCode',
+    description:
+      'GrowwCode builds custom machine learning models, data pipelines, predictive analytics, and MLOps solutions tailored to your business data.',
+  },
+  aiAgents: {
+    path: '/ai-agents',
+    title: 'AI Agents Development | GrowwCode',
+    description:
+      'GrowwCode develops intelligent AI agents for customer support, workflow automation, knowledge assistants, and decision-support copilots.',
+  },
+  itConsulting: {
+    path: '/it-consulting',
+    title: 'IT Consulting Services | GrowwCode',
+    description:
+      'GrowwCode offers IT consulting including technology audits, architecture planning, digital transformation, and senior engineering advisory.',
+  },
 }
 
 export { SITE_URL, DEFAULT_OG_IMAGE }

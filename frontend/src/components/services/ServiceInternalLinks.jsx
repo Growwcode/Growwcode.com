@@ -3,7 +3,7 @@ import { SERVICE_PAGE_LINKS } from '../../config/servicePages.js'
 
 export default function ServiceInternalLinks({ currentPath }) {
   return (
-    <section className="border-t border-brand-100 bg-gc-light/30 py-16">
+    <section className="service-page-links border-t border-brand-100 bg-gc-light/30">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <h2 className="text-xl font-bold text-gc-navy">Explore GrowwCode</h2>
         <p className="mt-2 text-sm text-gc-navy/60">

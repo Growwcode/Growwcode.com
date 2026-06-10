@@ -1,6 +1,6 @@
 export default function ServiceFAQ({ title, faqs }) {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
+    <section className="service-page-section mx-auto max-w-6xl px-6 lg:px-8">
       <h2 className="text-3xl font-bold tracking-tight text-gc-navy sm:text-4xl">{title}</h2>
       <p className="mt-4 max-w-2xl text-base text-gc-navy/60">
         Common questions about our process, pricing, and support.

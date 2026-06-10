@@ -24,7 +24,7 @@ const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
-const CONTACT_PHONES = ['9763684771', '9322330456','7499972072']
+const CONTACT_PHONES = ['9763684771', '7499972072']
 const CONTACT_EMAIL = 'growwcodeit@gmail.com'
 const SOCIAL_LINKS = {
   instagram: 'https://www.instagram.com/growwcode',
@@ -317,7 +317,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-brand-50 py-20 lg:py-28">
+    <section id="contact" className="bg-brand-50 pt-10 pb-20 lg:pt-12 lg:pb-28">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-14">
           <div>

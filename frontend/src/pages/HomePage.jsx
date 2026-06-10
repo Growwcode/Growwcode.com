@@ -1,6 +1,7 @@
 import Hero from '../components/Hero.jsx'
 import Agency from '../components/Agency.jsx'
 import Services from '../components/Services.jsx'
+import WhyChoose from '../components/WhyChoose.jsx'
 import Contact from '../components/Contact.jsx'
 import Footer from '../components/Footer.jsx'
 import SEO from '../components/SEO.jsx'
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Hero />
       <Agency />
       <Services />
+      <WhyChoose />
       <Contact />
       <Footer />
     </>

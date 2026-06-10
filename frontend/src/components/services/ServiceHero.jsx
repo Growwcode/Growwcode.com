@@ -1,6 +1,17 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function ServiceHero({ badge, title, subtitle }) {
+  const navigate = useNavigate()
+
+  function handleBack() {
+    if (window.history.length > 2) {
+      navigate(-1)
+      return
+    }
+
+    navigate('/#services')
+  }
+
   return (
     <section className="hero-section relative overflow-hidden">
       <div className="hero-section-decor" aria-hidden="true">
@@ -10,7 +21,18 @@ export default function ServiceHero({ badge, title, subtitle }) {
         <div className="hero-section-orb hero-section-orb--3" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-24">
+      <div className="service-page-hero-inner relative mx-auto max-w-6xl px-6 lg:px-8">
+        <button
+          type="button"
+          onClick={handleBack}
+          className="service-page-back mb-5 inline-flex items-center gap-2 rounded-full border border-gc-blue/20 bg-white/90 px-4 py-2 text-sm font-semibold text-gc-blue shadow-sm transition-all hover:border-gc-blue/35 hover:bg-white hover:shadow-md"
+        >
+          <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <path d="M12 5l-5 5 5 5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          Back
+        </button>
+
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-gc-blue/20 bg-white px-3 py-1.5 shadow-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-gc-blue shadow-[0_0_8px_rgba(0,127,252,0.5)]" />

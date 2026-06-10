@@ -73,7 +73,7 @@ export default function Agency() {
   const [whoRef, whoVisible] = useScrollReveal()
 
   return (
-    <section id="agency" className="relative overflow-hidden bg-brand-50 py-20 lg:py-28">
+    <section id="agency" className="relative overflow-hidden bg-brand-50 pt-20 pb-10 lg:pt-28 lg:pb-12">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-gc-navy/5 blur-3xl"

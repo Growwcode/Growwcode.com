@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function ServiceCTA({ title, description }) {
   return (
-    <section className="mx-auto max-w-6xl px-6 pb-20 lg:px-8 lg:pb-28">
+    <section className="service-page-cta mx-auto max-w-6xl px-6 lg:px-8">
       <div className="rounded-3xl bg-gc-navy px-8 py-12 text-center sm:px-12 sm:py-16">
         <h2 className="text-2xl font-bold text-white sm:text-3xl">{title}</h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/75">{description}</p>

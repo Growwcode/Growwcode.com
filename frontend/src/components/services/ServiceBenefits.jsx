@@ -1,6 +1,6 @@
 export default function ServiceBenefits({ title, subtitle, benefits }) {
   return (
-    <section className="bg-gc-light/50 py-20 lg:py-28">
+    <section className="service-page-section bg-gc-light/50">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight text-gc-navy sm:text-4xl">{title}</h2>
         {subtitle && <p className="mt-4 max-w-2xl text-base text-gc-navy/60">{subtitle}</p>}
