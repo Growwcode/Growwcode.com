@@ -78,7 +78,7 @@ export default function HeroFloatingCards() {
           return (
             <Link
               key={category.id}
-              to="/portfolio"
+              to="/project-work"
               className={`hero-float-card ${content.className}`}
               style={{ zIndex: content.zIndex }}
             >

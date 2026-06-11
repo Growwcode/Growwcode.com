@@ -4,7 +4,7 @@ import { LOGO_URL } from '../config/brand.js'
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
-  { label: 'Work', to: '/portfolio' },
+  { label: 'Agency', to: '/#agency' },
   { label: 'Services', to: '/services' },
   { label: 'Industries', to: '/industries' },
   { label: 'Contact', to: '/contact' },

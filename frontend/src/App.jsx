@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import ContactNowNotch from './components/ContactNowNotch.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
@@ -31,7 +31,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/project-work" element={<PortfolioPage />} />
+            <Route path="/portfolio" element={<Navigate to="/project-work" replace />} />
             <Route path="/industries" element={<IndustriesPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />

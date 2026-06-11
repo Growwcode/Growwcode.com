@@ -18,7 +18,7 @@ export const PAGE_SEO = {
       'Explore GrowwCode software development services: web apps, mobile apps, AI/ML, cloud infrastructure, and dedicated engineering teams tailored to your business.',
   },
   portfolio: {
-    path: '/portfolio',
+    path: '/project-work',
     title: 'Our Portfolio | GrowwCode',
     description:
       'View GrowwCode portfolio of web, mobile, and AI projects delivered for clients across e-commerce, healthcare, fintech, and more.',
@@ -79,9 +79,9 @@ export const PAGE_SEO = {
   },
   itConsulting: {
     path: '/it-consulting',
-    title: 'IT Consulting Services | GrowwCode',
+    title: 'AI Automation for Businesses | GrowwCode',
     description:
-      'GrowwCode offers IT consulting including technology audits, architecture planning, digital transformation, and senior engineering advisory.',
+      'GrowwCode delivers AI automation for businesses—workflow automation, intelligent integrations, and AI-powered tools that cut manual work and scale operations.',
   },
 }
 

@@ -1,3 +1,28 @@
+function SidebarThumbnail({ category, isActive }) {
+  const thumbSrc = category.thumbnail ?? category.images[0]?.src
+
+  if (thumbSrc) {
+    return (
+      <img
+        src={thumbSrc}
+        alt=""
+        className={`h-10 w-14 shrink-0 rounded-md object-cover sm:h-12 sm:w-16 ${
+          isActive ? 'ring-2 ring-gc-blue ring-offset-1 ring-offset-white' : ''
+        }`}
+      />
+    )
+  }
+
+  return (
+    <div
+      className={`h-10 w-14 shrink-0 rounded-md bg-gc-blue sm:h-12 sm:w-16 ${
+        isActive ? 'ring-2 ring-gc-blue ring-offset-1 ring-offset-white' : 'opacity-80'
+      }`}
+      aria-hidden="true"
+    />
+  )
+}
+
 function MobileCategorySlider({ categories, activeId, onSelect }) {
   return (
     <nav aria-label="Work categories" className="py-3">
@@ -29,7 +54,6 @@ function DesktopSidebar({ categories, activeId, onSelect }) {
   return (
     <aside className="hidden lg:block lg:w-full">
       <div className="mb-4">
-        
         <h3 className="mt-1 text-lg font-bold text-gc-navy">Categories</h3>
       </div>
 
@@ -45,7 +69,7 @@ function DesktopSidebar({ categories, activeId, onSelect }) {
                 <button
                   type="button"
                   onClick={() => onSelect(category.id)}
-                  className={`group grid w-full grid-cols-[38px_1fr] items-center gap-3 rounded-xl px-2 py-2 text-left transition ${
+                  className={`group grid w-full grid-cols-[38px_1fr_auto] items-center gap-3 rounded-xl px-2 py-2 text-left transition ${
                     isActive
                       ? 'bg-white shadow-sm ring-1 ring-slate-200'
                       : 'hover:bg-white/70'
@@ -77,6 +101,8 @@ function DesktopSidebar({ categories, activeId, onSelect }) {
                       {category.images?.length || 0} projects
                     </span>
                   </span>
+
+                  <SidebarThumbnail category={category} isActive={isActive} />
                 </button>
               </li>
             )

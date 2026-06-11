@@ -9,7 +9,7 @@ export const SERVICE_PAGE_LINKS = [
   { label: 'AWS Cloud', path: '/aws-cloud-services' },
   { label: 'AI / ML', path: '/ai-ml-projects' },
   { label: 'AI Agents', path: '/ai-agents' },
-  { label: 'IT Consulting', path: '/it-consulting' },
+  { label: 'AI Automation', path: '/it-consulting' },
 ]
 
 const SHARED_FAQS = [
@@ -866,87 +866,87 @@ export const AI_AGENTS_PAGE = {
 export const IT_CONSULTING_PAGE = {
   seoKey: 'itConsulting',
   path: '/it-consulting',
-  badge: 'IT Consulting',
-  h1: 'IT Consulting for Smarter Technology Decisions',
+  badge: 'AI Automation',
+  h1: 'AI Automation for Businesses That Want to Scale Smarter',
   heroSubtitle:
-    'GrowwCode helps leadership teams audit systems, plan roadmaps, and execute digital transformation—with senior engineers who have shipped real products.',
+    'GrowwCode helps businesses automate repetitive workflows, connect their tools with intelligent integrations, and deploy AI-powered systems that save time and reduce operational overhead.',
   overview: {
-    title: 'Strategic guidance backed by hands-on experience',
+    title: 'Automation built around how your business actually works',
     paragraphs: [
-      'Technology decisions have long-term cost. Wrong architecture, vendor lock-in, or unclear roadmaps slow growth and drain budgets. GrowwCode provides IT consulting that combines strategic advice with practical engineering insight—we have built the systems we recommend.',
-      'Whether you need a technology audit, cloud migration plan, team structure advice, or a build-vs-buy analysis, we deliver clear recommendations, documented findings, and optional hands-on support to implement the path forward.',
+      'Manual processes slow teams down—data entry, handoffs between tools, follow-ups, reporting, and routine customer requests all add up. GrowwCode designs AI automation that fits your operations: we map your workflows, identify high-impact opportunities, and build solutions that work with the software you already use.',
+      'From automated lead routing and invoice processing to intelligent document handling and internal task orchestration, we deliver practical automation—not generic bots. Every solution includes monitoring, error handling, and clear handoff paths so your team stays in control.',
     ],
   },
   offerings: {
-    title: 'Consulting services',
-    subtitle: 'Focused engagements that unblock your next move.',
+    title: 'Automation services we deliver',
+    subtitle: 'Practical AI and workflow solutions for growing businesses.',
     items: [
       {
-        title: 'Technology audits',
+        title: 'Workflow automation',
         description:
-          'Assess codebases, infrastructure, security posture, and technical debt—with prioritized action plans.',
+          'Automate repetitive tasks across CRMs, email, spreadsheets, and internal tools with reliable, rules-based and AI-assisted flows.',
       },
       {
-        title: 'Architecture & roadmap planning',
+        title: 'Business process optimization',
         description:
-          'Define scalable system designs, migration phases, and realistic timelines aligned to business goals.',
+          'Map bottlenecks, eliminate manual handoffs, and redesign processes before automating them for lasting efficiency gains.',
       },
       {
-        title: 'Digital transformation advisory',
+        title: 'AI-powered integrations',
         description:
-          'Guide process digitization, tool selection, and change management for teams adopting new platforms.',
+          'Connect your apps with intelligent middleware—sync data, trigger actions, and keep systems updated without manual intervention.',
       },
       {
-        title: 'Team & delivery coaching',
+        title: 'Custom automation tools',
         description:
-          'Improve sprint practices, code review standards, and DevOps maturity with working engineers at the table.',
+          'Build internal dashboards, bots, and assistants tailored to your team\'s daily operations and industry requirements.',
       },
     ],
   },
   technologies: {
-    title: 'Domains we advise on',
-    subtitle: 'Breadth across modern product and infrastructure stacks.',
-    items: ['Cloud (AWS/Azure/GCP)', 'React & Node.js', 'Microservices', 'DevOps', 'Security', 'Data platforms', 'AI adoption', 'Legacy modernization'],
+    title: 'Tools & platforms we work with',
+    subtitle: 'Flexible automation across your existing stack.',
+    items: ['OpenAI', 'Python', 'Node.js', 'Zapier/Make', 'REST APIs', 'Webhooks', 'CRM systems', 'AWS'],
   },
   benefits: {
-    title: 'Why clients choose GrowwCode consulting',
-    subtitle: 'Advice you can execute—not slide decks alone.',
+    title: 'Why businesses choose GrowwCode for automation',
+    subtitle: 'Real efficiency gains—not experiments that never ship.',
     items: [
       {
-        title: 'Practitioner-led',
-        description: 'Consultants are senior engineers and architects who still build and deploy software.',
+        title: 'ROI-focused approach',
+        description: 'We prioritize automations that save the most time and cost, with clear metrics to track impact.',
       },
       {
-        title: 'Clear, honest recommendations',
-        description: 'We tell you what is urgent, what can wait, and what not to build—no upsell pressure.',
+        title: 'Works with your current tools',
+        description: 'No rip-and-replace—we integrate with HubSpot, Slack, Google Workspace, custom apps, and more.',
       },
       {
-        title: 'Implementation optional',
-        description: 'Need help executing the plan? Our development and cloud teams can take it from strategy to launch.',
+        title: 'Built to last',
+        description: 'Production-grade automation with logging, alerts, and maintenance support so systems keep running smoothly.',
       },
     ],
   },
-  faqTitle: 'IT consulting FAQs',
+  faqTitle: 'AI automation FAQs',
   faqs: [
     {
-      question: 'What does a typical consulting engagement look like?',
+      question: 'What business processes can be automated with AI?',
       answer:
-        'We start with stakeholder interviews and system review, then deliver a findings report with recommendations, effort estimates, and phased priorities. Short audits may take two to three weeks; larger transformation roadmaps can span longer with milestone check-ins.',
+        'Common candidates include lead qualification, customer follow-ups, data entry, report generation, invoice processing, appointment scheduling, and internal approvals. During discovery we identify the highest-impact workflows for your team.',
     },
     {
-      question: 'Do you work alongside our in-house team?',
+      question: 'Do we need to replace our existing software?',
       answer:
-        'Yes. We often partner with internal developers and IT staff—augmenting capacity, reviewing architecture, and transferring knowledge so your team owns the outcome.',
+        'No. Most automations connect to tools you already use via APIs, webhooks, or integration platforms. We design around your current stack to minimize disruption.',
     },
     {
-      question: 'Can you help after the audit is complete?',
+      question: 'How long does it take to see results?',
       answer:
-        'Absolutely. Many clients retain GrowwCode for implementation, dedicated squads, or ongoing advisory as their roadmap evolves.',
+        'Focused automations can go live in a few weeks. Larger multi-workflow projects are phased so your team sees value early while we expand coverage over time.',
     },
   ],
   cta: {
-    title: 'Need clarity on your technology direction?',
+    title: 'Ready to automate the work holding your team back?',
     description:
-      'Book a consultation with GrowwCode. We will help you assess, plan, and move forward with confidence.',
+      'Tell us about your workflows. GrowwCode will identify automation opportunities and build solutions that save time from day one.',
   },
 }

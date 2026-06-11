@@ -15,7 +15,7 @@ export default function Footer() {
           <Link to="/#agency" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
             About
           </Link>
-          <Link to="/portfolio" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
+          <Link to="/project-work" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
             Work
           </Link>
           <Link to="/services" className="text-sm text-gc-navy/65 transition-colors hover:text-gc-blue">
