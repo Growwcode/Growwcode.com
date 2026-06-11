@@ -175,7 +175,7 @@ export default function Portfolio() {
         </div>
       </div>
 
-      <div className="sticky top-16 z-40 border-b border-slate-200/80 bg-[#f7f9fc]/95 backdrop-blur-sm lg:hidden">
+      <div className="sticky top-12 z-40 border-b border-slate-200/80 bg-[#f7f9fc] sm:top-14 lg:hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <PortfolioSidebar
             variant="mobile"
@@ -188,7 +188,7 @@ export default function Portfolio() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-start gap-5 sm:gap-6 lg:grid-cols-[260px_1fr] lg:gap-10 xl:grid-cols-[290px_1fr]">
-          <div className="hidden min-w-0 lg:block lg:sticky lg:top-[4.25rem] lg:z-30 lg:self-start">
+          <div className="hidden min-w-0 lg:block lg:sticky lg:top-14 lg:z-30 lg:self-start">
             <PortfolioSidebar
               variant="desktop"
               categories={PORTFOLIO_CATEGORIES}

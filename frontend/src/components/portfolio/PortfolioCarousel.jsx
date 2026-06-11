@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import PortfolioImageLightbox from './PortfolioImageLightbox.jsx'
+import { BTN_PRIMARY } from '../../config/ui.js'
 
 function PlaceholderSlide({ label, index, total }) {
   return (
@@ -116,7 +117,7 @@ export function PortfolioProjectDetails({
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-full bg-gc-blue px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-gc-blue/90 sm:w-auto"
+            className={`${BTN_PRIMARY} w-full shrink-0 sm:w-auto`}
           >
             {project.linkLabel ?? 'Visit Website'}
             <svg viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor" aria-hidden="true">

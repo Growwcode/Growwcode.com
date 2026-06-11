@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
+import { BTN_PRIMARY, BTN_PRIMARY_BLOCK } from '../config/ui.js'
 
 const SERVICE_TAGS = [
   'Website Development',
@@ -369,11 +370,7 @@ function SuccessModal({ onClose }) {
           Thanks for reaching out. We&apos;ve received your details and will get back to you
           shortly.
         </p>
-        <button
-          type="button"
-          onClick={onClose}
-          className="mt-8 w-full rounded-xl bg-gc-blue px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-gc-blue/25 transition-colors hover:bg-gc-navy sm:w-auto"
-        >
+        <button type="button" onClick={onClose} className={`${BTN_PRIMARY} mt-8 w-full sm:w-auto`}>
           Done
         </button>
       </div>
@@ -502,7 +499,7 @@ function ContactForm({ formData, selectedServices, isSubmitting, error, onSubmit
       <button
         type="submit"
         disabled={isSubmitting}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gc-blue px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-gc-blue/25 transition-all hover:bg-gc-navy disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+        className={`${BTN_PRIMARY} w-full sm:w-auto`}
       >
         {isSubmitting ? (
           <>

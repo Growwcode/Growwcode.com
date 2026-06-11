@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import ServiceCardBg from './ServiceCardBg.jsx'
 import { useScrollReveal } from '../hooks/useScrollReveal.js'
 import { SERVICE_PAGE_LINKS } from '../config/servicePages.js'
+import { BTN_PRIMARY } from '../config/ui.js'
 
 const SERVICES = [
   {
@@ -270,7 +271,7 @@ function FeaturedServiceCard({ service }) {
             ))}
           </div>
 
-          <span className="mt-6 inline-flex items-center gap-2 rounded-full bg-gc-blue px-5 py-2.5 text-sm font-semibold text-white transition-colors group-hover:bg-white group-hover:text-gc-navy">
+          <span className={`${BTN_PRIMARY} mt-6`}>
             Explore service
             <svg viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor" aria-hidden="true">
               <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
@@ -371,10 +372,7 @@ function ServicesCTA() {
           Tell us about your goals and we&apos;ll recommend the right approach — no obligation,
           just honest guidance from our engineering team.
         </p>
-        <Link
-          to="/contact"
-          className="mt-8 inline-flex items-center gap-2 rounded-full bg-gc-blue px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-gc-blue/25 transition-colors hover:bg-white hover:text-gc-navy"
-        >
+        <Link to="/contact" className={`${BTN_PRIMARY} mt-8`}>
           Get a free consultation
           <svg viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor" aria-hidden="true">
             <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
@@ -501,10 +499,7 @@ function HomeServicesSection() {
         </div>
 
         <div className="mt-10 text-center">
-          <Link
-            to="/services"
-            className="inline-flex items-center gap-2 rounded-full border border-gc-blue/25 bg-white px-6 py-3 text-sm font-semibold text-gc-blue shadow-sm transition-all hover:border-gc-blue hover:bg-gc-blue hover:text-white"
-          >
+          <Link to="/services" className={BTN_PRIMARY}>
             View all services
             <svg viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor" aria-hidden="true">
               <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />

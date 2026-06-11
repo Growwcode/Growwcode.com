@@ -525,6 +525,45 @@
   color: #007ffc;
 }
 
+/* ── Site-wide primary button (navbar "Get in touch") ── */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #007ffc;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: #012c64;
+  color: #ffffff;
+}
+
+.btn-primary:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn-primary--block {
+  width: 100%;
+}
+
+.btn-primary--compact {
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+}
+
 .hero-btn-primary {
   display: inline-flex;
   align-items: center;

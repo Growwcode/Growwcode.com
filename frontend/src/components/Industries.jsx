@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { BTN_PRIMARY } from '../config/ui.js'
 import { useScrollReveal } from '../hooks/useScrollReveal.js'
 
 const INDUSTRIES = [
@@ -281,10 +282,7 @@ function IndustryCta({ visible }) {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-sm font-semibold text-gc-navy shadow-lg shadow-black/10 transition-all hover:-translate-y-0.5 hover:bg-brand-50 hover:shadow-xl"
-            >
+            <Link to="/contact" className={BTN_PRIMARY}>
               Talk to our team
               <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M4 10h12M11 5l5 5-5 5" strokeLinecap="round" strokeLinejoin="round" />
