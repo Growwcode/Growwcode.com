@@ -1,5 +1,6 @@
 import { SITE_URL } from './seo.js'
 import { LOGO_URL } from './brand.js'
+import { CONTACT_PHONES, SOCIAL_PROFILES, formatPhone } from './contact.js'
 
 export const ORGANIZATION_SCHEMA = {
   '@context': 'https://schema.org',
@@ -7,10 +8,8 @@ export const ORGANIZATION_SCHEMA = {
   name: 'GrowwCode',
   url: SITE_URL,
   logo: LOGO_URL,
-  sameAs: [
-    'https://www.instagram.com/growwcode',
-    'https://www.linkedin.com/company/growwcode',
-  ],
+  telephone: formatPhone(CONTACT_PHONES[0]),
+  sameAs: SOCIAL_PROFILES,
 }
 
 export const WEBSITE_SCHEMA = {

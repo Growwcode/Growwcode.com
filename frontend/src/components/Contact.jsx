@@ -2,6 +2,12 @@ import { useEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
 import { BTN_PRIMARY, BTN_PRIMARY_BLOCK } from '../config/ui.js'
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONES,
+  SOCIAL_LINKS,
+  formatPhone,
+} from '../config/contact.js'
 
 const SERVICE_TAGS = [
   'Website Development',
@@ -26,14 +32,6 @@ const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
-const CONTACT_PHONES = ['9405754107']
-const CONTACT_EMAIL = 'growwcodeit@gmail.com'
-const SOCIAL_LINKS = {
-  instagram: 'https://www.instagram.com/growwcode',
-  linkedin: 'https://www.linkedin.com/company/growwcode',
-  whatsapp: `https://wa.me/91${CONTACT_PHONES[0]}`,
-}
-
 const TRUST_POINTS = [
   'Response within one business day',
   'Free project consultation',
@@ -42,10 +40,6 @@ const TRUST_POINTS = [
 
 const inputClassName =
   'w-full rounded-xl border border-slate-200/90 bg-white px-4 py-3 text-sm text-gc-navy placeholder:text-gc-navy/35 outline-none transition-all focus:border-gc-blue focus:ring-4 focus:ring-gc-blue/10'
-
-function formatPhone(phone) {
-  return `+91 ${phone.slice(0, 5)} ${phone.slice(5)}`
-}
 
 function FormField({ label, htmlFor, required, hint, children }) {
   return (
@@ -259,7 +253,7 @@ function ContactSidebar({ isPage }) {
         <ContactMethodCard
           href={SOCIAL_LINKS.whatsapp}
           label="WhatsApp"
-          value="Chat with our team"
+          value={formatPhone(CONTACT_PHONES[0])}
           external
           icon={
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -295,6 +289,12 @@ function ContactSidebar({ isPage }) {
           <SocialLink href={SOCIAL_LINKS.linkedin} label="LinkedIn">
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </SocialLink>
+
+          <SocialLink href={SOCIAL_LINKS.facebook} label="Facebook">
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
             </svg>
           </SocialLink>
 
