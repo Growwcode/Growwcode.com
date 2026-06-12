@@ -4,12 +4,17 @@ const SITE_URL = 'https://growwcode.com'
 
 const DEFAULT_OG_IMAGE = LOGO_URL
 
+export const DEFAULT_SEO = {
+  title: 'GrowwCode - Custom Software, Web & Mobile App Development',
+  description:
+    'GrowwCode builds custom software, web applications, and mobile apps. Full-stack development, AI/ML solutions, and cloud services for startups and enterprises.',
+}
+
 export const PAGE_SEO = {
   home: {
     path: '/',
-    title: 'GrowwCode - Custom Software, Web & Mobile App Development',
-    description:
-      'GrowwCode builds custom software, web applications, and mobile apps. Full-stack development, AI/ML solutions, and cloud services for startups and enterprises.',
+    title: DEFAULT_SEO.title,
+    description: DEFAULT_SEO.description,
   },
   services: {
     path: '/services',

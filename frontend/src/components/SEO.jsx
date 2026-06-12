@@ -6,8 +6,10 @@ export default function SEO({ title, description, path, image = DEFAULT_OG_IMAGE
 
   return (
     <Helmet>
+      <html lang="en" />
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="robots" content="index, follow" />
       <link rel="canonical" href={canonical} />
 
       <meta property="og:type" content="website" />
