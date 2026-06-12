@@ -293,35 +293,35 @@
 }
 
 @media (max-width: 1023px) {
-  .hero-section {
+  #home.hero-section {
     background: #012c64;
   }
 
-  .hero-section-mobile-photo {
+  #home .hero-section-mobile-photo {
     display: block;
     position: absolute;
     inset: 0;
     background: url('/mobileHeroimage.png') center top / cover no-repeat;
   }
 
-  .hero-section-mobile-overlay {
+  #home .hero-section-mobile-overlay {
     display: block;
     position: absolute;
     inset: 0;
     background: rgba(1, 44, 100, 0.68);
   }
 
-  .hero-section-mesh,
-  .hero-section-glow {
+  #home .hero-section-mesh,
+  #home .hero-section-glow {
     display: none;
   }
 
-  .hero-section .hero-headline {
+  #home.hero-section .hero-headline {
     color: #fff;
     margin-top: 7rem;
   }
 
-  .hero-section .hero-gradient-text {
+  #home.hero-section .hero-gradient-text {
     background: linear-gradient(
       115deg,
       #ffffff 0%,
@@ -338,27 +338,27 @@
       drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
   }
 
-  .hero-section .hero-subtext {
+  #home.hero-section .hero-subtext {
     color: rgba(255, 255, 255, 0.82);
   }
 
-  .hero-section .hero-link-secondary {
+  #home.hero-section .hero-link-secondary {
     color: #a8d4ff;
   }
 
-  .hero-section .hero-clients {
+  #home.hero-section .hero-clients {
     border-top-color: rgba(255, 255, 255, 0.16);
   }
 
-  .hero-section .hero-clients-label {
+  #home.hero-section .hero-clients-label {
     color: rgba(255, 255, 255, 0.55);
   }
 
-  .hero-section .hero-client-name {
+  #home.hero-section .hero-client-name {
     color: rgba(255, 255, 255, 0.78);
   }
 
-  .hero-section .hero-client-item:hover .hero-client-name {
+  #home.hero-section .hero-client-item:hover .hero-client-name {
     color: #a8d4ff;
   }
 }

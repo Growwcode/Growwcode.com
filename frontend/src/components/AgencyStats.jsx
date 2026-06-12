@@ -10,7 +10,7 @@ const STATS = [
     ringText: 'CRAFTING WINNING SOLUTIONS',
   },
   {
-    value: '5+',
+    value: '1.5+',
     labelLines: ['Years of', 'Experience'],
     ringText: 'EXPERIENCE MEETS INNOVATION',
   },
