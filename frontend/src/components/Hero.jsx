@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import HeroClients from './HeroClients.jsx'
 import HeroFloatingCards from './HeroFloatingCards.jsx'
 
 export default function Hero() {
@@ -45,8 +44,6 @@ export default function Hero() {
 
           <HeroFloatingCards />
         </div>
-
-        <HeroClients />
       </div>
     </section>
   )
