@@ -4,7 +4,7 @@ export const CONTACT_EMAIL = 'growwcodeit@gmail.com'
 
 export const SOCIAL_LINKS = {
   linkedin: 'https://www.linkedin.com/company/growwcode-com/',
-  instagram: 'https://www.instagram.com/growwcode.com_?igsh=Z3R1cXlmMm96bGF2',
+  instagram: 'https://www.instagram.com/growwcode.tech',
   facebook: 'https://www.facebook.com/share/1Bg4m8eWBA/',
   whatsapp: `https://wa.me/91${CONTACT_PHONES[0]}`,
 }
