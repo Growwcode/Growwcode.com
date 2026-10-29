@@ -17,7 +17,7 @@ export default function Hero() {
           <div className="hero-copy">
             <h1 className="hero-headline text-4xl font-black leading-[1.08] tracking-tight text-gc-navy sm:text-5xl lg:text-[3.25rem] lg:leading-[1.06] xl:text-6xl">
               Turning Ideas Into{' '}
-              <span className="hero-gradient-text">Powerful Solutions</span>
+              <span className="text-gc-blue">Powerful Solutions</span>
             </h1>
 
             <p className="hero-subtext mx-auto mt-4 max-w-lg text-base leading-relaxed sm:mt-5 sm:text-lg lg:mx-0">
